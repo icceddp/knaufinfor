@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<body onload="myTime()">
+<title>Estrutura Base</title>
+<meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1?>
+</head>
+
+<style>
+:root {
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+}
+
+
+*
+{
+margin:0;
+padding:0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+
+
+body {
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: #ecf0f3;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow: auto;
+  font-family: Arial;
+}
+
+.container {
+  width: 945px;
+  height: 590px;
+  
+}
+
+.work-area {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+.header {
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+place-items: center;
+background: #1d80f2;
+width: calc(100%-20px);
+height: 40px;  
+padding: 5px; 
+  
+}  
+  
+h1 {
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+  letter-spacing: 1px;
+  
+}
+
+label {
+  font-size: 14px;
+  color: #595959;
+  letter-spacing: 1px;
+  padding:2px;
+  width:105px;
+}
+
+
+.records {
+  margin: 1px;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.line-one{
+
+display: grid;
+grid-template-columns: repeat(6, 152px);
+grid-template-rows: auto;
+grid-gap: 5px;
+justify-items: center;     
+}
+
+.line-two{
+
+display: grid;
+grid-template-columns: repeat(6, 150px);
+grid-template-rows: 32px;
+grid-gap: 5px;
+justify-items: center;
+padding: 3px;  
+border-bottom: 2px groove #d3d3d3;  
+}
+
+.line-three{
+
+display: grid;
+grid-template-columns: repeat(6, 152px);
+grid-template-rows: auto;
+grid-gap: 5px;
+justify-items: center;     
+}
+
+.line-four{
+
+display: grid;
+grid-template-columns: repeat(6, 150px);
+grid-template-rows: 32px;
+grid-gap: 5px;
+justify-items: center;
+padding: 3px;
+border-bottom: 2px groove #d3d3d3;  
+}
+
+.line-five{
+
+display: grid;
+grid-template-columns: repeat(6, 152px);
+grid-template-rows: auto;
+grid-gap: 5px;
+justify-items: center;     
+}
+
+.line-six{
+
+display: grid;
+grid-template-columns: repeat(6, 150px);
+grid-template-rows: 32px;
+grid-gap: 5px;
+justify-items: center;
+padding: 3px;
+border-bottom: 2px groove #d3d3d3;  
+}
+
+.line-seven{
+
+display: grid;
+grid-template-columns: repeat(12, 152px);
+grid-template-rows: auto;
+grid-gap: 1px;
+justify-items: center;
+vertical-align: middle;
+overflow-x: scroll;
+padding: 0 0 5px 2px;
+border-bottom: 2px groove #d3d3d3;  
+}
+
+.line-eight{
+
+display: grid;
+grid-template-columns: repeat(1, 100%);
+grid-template-rows: auto;
+grid-gap: 3px;
+padding: 0 0 5px 2px;  
+justify-items: left;
+border-bottom: 2px groove #d3d3d3;  
+}
+
+.line-nine{
+
+display: grid;
+grid-template-columns: repeat(6, 150px);
+grid-template-rows: auto;
+grid-gap: 5px;
+justify-items: center;
+padding: 13px; 
+
+  
+}
+
+
+input, select{
+width: 130px;
+height: 28px; 
+border-radius: 5px;
+box-shadow: inset 3px 3px 3px #babecc, inset -3px -3px 3px #ffffff;  
+}
+
+#observacao{
+width: 800px;
+height: 28px; 
+margin: 0 0 5px 5px;  
+}
+
+button{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 85%;
+  height: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background: #1d80f2;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 2px 2px 3px #0d498f,
+              -2px -2px 7px #ffffff73;
+}
+
+button:active {
+  
+  color: #9edaff;
+  box-shadow: inset 2px 2px 7px #0d498f,
+              inset -2px -2px 7px #ffffff73;
+}
+  
+svg:active {
+  fill: #9edaff;
+}
+  
+  
+svg{
+  
+fill:white;
+
+  
+}    
+ 
+  
+
+
+</style>
+
+
+<body onload="start(),initAudio();">
+
+<div class="container">
+<div class="work-area">
+<div class="header">
+<h1>AUDITORIA DE PRODUTO</h1>
+<!-- header -->  
+</div>  
+<div class="records">
+<div class="line-one">
+<label>Data</label>
+<label>Turno</label>
+<label>Auditor</label>
+<label>Encarregado</label>
+<label>Operador</label>
+<label>Tp. Inspeção</label>
+<!-- line-one class="col-xs-12" -->  
+</div>  
+<div class="line-two">
+<label id="data">dd/mm/aaaa</label>
+<select id="turno">
+  <option value="1o">1o.</option>
+  <option value="2o">2o.</option>
+  <option value="3o">3o.</option>
+</select>
+<input type="text" id="auditor" >
+<input type="text" id="encarregado" >
+<input type="text" id="operador" >
+<select id="tpinsp">
+  <option value="setup">Set-Up</option>
+  <option value="processo">Processo</option>
+  <option value="semplan">Sem Plano</option>
+</select>  
+  
+<!-- line-two -->  
+</div> 
+  
+<div class="line-three">
+<label>AM</label>
+<label>Máquina</label>
+<label>Silo</label>
+<label>Dens. Silo</label>
+<label>Dens. OP</label>
+<label>Dens. FT</label>
+<!-- line-three -->  
+</div>  
+<div class="line-four">
+<input type="number" id="am">
+<select id="maquina">
+  <option value="01">01</option>
+  <option value="01">02</option>
+  <option value="03">03</option>
+<option value="04">04</option>
+  <option value="05">05</option>
+  <option value="06">06</option>  
+  <option value="07">07</option>
+  <option value="08">08</option>
+  <option value="09">09</option>
+<option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>  
+<option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+<option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+<option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option> 
+value="25">25</option>
+  <option value="26">26</option>   
+</select>
+<select id="silo">
+  <option value="A1">A1</option>
+  <option value="A2">A2</option>
+  <option value="A3">A3</option>
+</select>  
+<input type="number" id="dsilo">
+<input type="number" id="dop">
+<input type="number" id="dft">  
+  
+<!-- line-four -->  
+</div> 
+<div class="line-five">
+<label>Tp. de Ciclo</label>
+<label>Vácuo 1 (-)</label>
+<label>Vácuo 2 (-)</label>
+<label>Refri. 1</label>
+<label>Refri. 2</label>
+<label></label>
+<!-- line-five -->  
+</div>  
+<div class="line-six">
+<input type="number" id="ciclo">
+<input type="number" placeholder="Min -0.5" id="vacuo1">
+<input type="number" placeholder="Min -0.5" id="vacuo2">
+<input type="number"  placeholder="Menor que 5 seg." id="refri1">
+<input type="number" placeholder="Menor que 5 seg." id="refri2">  
+<label></label>  
+<!-- line-six -->  
+</div> 
+  
+<div class="line-seven">
+<label>Parte</label>
+<label>Etiqueta</label>
+<label>Umidade</label>
+<label>Soldabilidade</label>
+<label>Peso Min.</label>
+<label>Peso Max.</label>
+<label>Peso Real</label>
+<label>Dimen. Min</label>  
+<label>Dimen. Max</label>
+<label>Dimen. Real</label>
+<label>Clichês</label>
+<label>Visual</label>
+
+ <select id="parte1">
+  <option value="Direita">Direita</option>
+  <option value="Esquerda">Esquerda</option>
+  <option value="Frontal">Frontal</option>
+</select>
+<input type="text" id="etiqueta1">
+<input type="number" placeholder="Max 5%" id="umidade1">
+<input type="number" placeholder="Mmin 65%" id="Solda1">
+<input type="number" id="pesomin1">
+<input type="number" id="pesomax1">
+<input type="number" id="pesoreal1">
+<input type="number" id="dimmin1">
+<input type="number" id="dimmax1">
+<input type="number" id="dimreal1">  
+<select id="cliche1">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>
+<select id="visual1">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>
+
+  <select id="parte2">
+ <option value="NA">NA</option> 
+ <option value="Direita">Direita</option>
+  <option value="Esquerda">Esquerda</option>
+  <option value="Frontal">Frontal</option>
+</select>
+<input type="text" id="etiqueta2">
+<input type="number" placeholder="Max 5%" id="umidade2">
+<input type="number" placeholder="Mmin 65%" id="Solda2">
+<input type="number" id="pesomin2">
+<input type="number" id="pesomax2">
+<input type="number" id="pesoreal2">
+<input type="number" id="dimmin2">
+<input type="number" id="dimmax2">
+<input type="number" id="dimreal2">  
+<select id="cliche2">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>
+<select id="visual2">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>
+ <select id="parte3">
+  <option value="NA">NA</option>
+  <option value="Direita">Direita</option>
+  <option value="Esquerda">Esquerda</option>
+  <option value="Frontal">Frontal</option>
+</select>
+<input type="text" id="etiqueta3">
+<input type="number" placeholder="Max 5%" id="umidade3">
+<input type="number" placeholder="Mmin 65%" id="Solda3">
+<input type="number" id="pesomin3">
+<input type="number" id="pesomax3">
+<input type="number" id="pesoreal3">
+<input type="number" id="dimmin3">
+<input type="number" id="dimmax3">
+<input type="number" id="dimreal3">  
+<select id="cliche3">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>
+<select id="visual3">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>
+
+  <select id="parte4">
+ <option value="NA">NA</option> 
+ <option value="Direita">Direita</option>
+  <option value="Esquerda">Esquerda</option>
+  <option value="Frontal">Frontal</option>
+</select>
+<input type="text" id="etiqueta4">
+<input type="number" placeholder="Max 5%" id="umidade4">
+<input type="number" placeholder="Mmin 65%" id="Solda4">
+<input type="number" id="pesomin4">
+<input type="number" id="pesomax4">
+<input type="number" id="pesoreal4">
+<input type="number" id="dimmin4">
+<input type="number" id="dimmax4">
+<input type="number" id="dimreal4">  
+<select id="cliche4">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>
+<select id="visual4">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>  
+ <select id="parte5">
+  <option value="NA">NA</option>
+  <option value="Direita">Direita</option>
+  <option value="Esquerda">Esquerda</option>
+  <option value="Frontal">Frontal</option>
+</select>
+<input type="text" id="etiqueta5">
+<input type="number" placeholder="Max 5%" id="umidade5">
+<input type="number" placeholder="Mmin 65%" id="Solda5">
+<input type="number" id="pesomin5">
+<input type="number" id="pesomax5">
+<input type="number" id="pesoreal5">
+<input type="number" id="dimmin5">
+<input type="number" id="dimmax5">
+<input type="number" id="dimreal5">  
+<select id="cliche5">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>
+<select id="visual5">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>
+
+  <select id="parte6">
+ <option value="NA">NA</option> 
+ <option value="Direita">Direita</option>
+  <option value="Esquerda">Esquerda</option>
+  <option value="Frontal">Frontal</option>
+</select>
+<input type="text" id="etiqueta6">
+<input type="number" placeholder="Max 5%" id="umidade6">
+<input type="number" placeholder="Mmin 65%" id="Solda6">
+<input type="number" id="pesomin6">
+<input type="number" id="pesomax6">
+<input type="number" id="pesoreal6">
+<input type="number" id="dimmin6">
+<input type="number" id="dimmax6">
+<input type="number" id="dimreal6">  
+<select id="cliche6">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>
+<select id="visual6">
+  <option value="OK">OK</option>
+  <option value="NOK">NOK</option>
+  </select>   
+  
+<!-- line-seven  -->  
+</div>  
+<div class="line-eight">
+<label>Observações</label>
+<input type="text" id="observacao">  
+<!-- line-eight -->  
+</div> 
+
+<div class="line-nine">
+<label></label>  
+<button type="button" id="send" onclick="validateInspec();datarecord()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 21" height="26" id="Layer_21" viewBox="0 0 26 26" width="26"><title/><polygon points="3 12 8.61 14.992 17 8 9 17.455 9 21 12.164 16.887 18 20 21 3 3 12"/></svg>Send</button>
+<button type="button" id="save"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 52 52" width="26"><path d="M0 0h48v48h-48z" fill="none"/><path d="M34 6h-24c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-24l-8-8zm-10 32c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm6-20h-20v-8h20v8z"/></svg>Save</button>
+<button type="button" id="clean"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" height="24" id="Layer_1" viewBox="0 0 22 22" width="24"><title/><path d="M21.20709,2.79291a.99989.99989,0,0,0-1.41418,0L12.893,9.69275l1.41425,1.41418,6.89984-6.89984A.99989.99989,0,0,0,21.20709,2.79291Z"/><path d="M12.31055,16.13965c-1.51636-1.486-3.06219-3.01465-4.39972-4.57166l-.2193.12073-.00934.00513a6.87365,6.87365,0,0,1-4.88538.65833.65315.65315,0,0,0-.79443.69147A9.82176,9.82176,0,0,0,4.7807,19.17352a12.3232,12.3232,0,0,0,4.178-1.77637,14.79974,14.79974,0,0,1-2.44946,3.19507A12.05327,12.05327,0,0,0,8.696,21.76483a.64246.64246,0,0,0,.24408.04767.65283.65283,0,0,0,.47119-.20074,17.80072,17.80072,0,0,0,3.21582-4.88623l.08655-.188C12.57751,16.40375,12.44806,16.2746,12.31055,16.13965Z"/><path d="M13.36035,15.06885l.04742.04675.422-.844a1.612,1.612,0,0,0-.30194-1.86072l-1.65717-1.65717a1.612,1.612,0,0,0-1.86072-.30194L9.25,10.83173C10.50134,12.261,11.9469,13.68317,13.36035,15.06885Z"/></svg>Clean</button>
+<button type="button" id="home"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 32 32" id="Glyph" height="24px" version="1.1"  width="24px"  viewBox="0 0 38 38" xml:space="preserve"><path d="M30.854,16.548C30.523,17.43,29.703,18,28.764,18H28v11c0,0.552-0.448,1-1,1h-6v-7c0-2.757-2.243-5-5-5  s-5,2.243-5,5v7H5c-0.552,0-1-0.448-1-1V18H3.235c-0.939,0-1.759-0.569-2.09-1.451c-0.331-0.882-0.088-1.852,0.62-2.47L13.444,3.019  c1.434-1.357,3.679-1.357,5.112,0l11.707,11.086C30.941,14.696,31.185,15.666,30.854,16.548z" id="XMLID_219_"/></svg>Home</button> 
+<label></label> 
+<!-- line-nine -->  
+  
+</div> 
+  
+<!-- records -->  
+</div>  
+  
+  
+<!-- work-area -->  
+</div>  
+  
+  
+<!-- container -->  
+</div>  
+  
+  
+   
+</body>
+
+
+<script>
+  
+function validateInspec() {//main
+
+var auditor  = document.getElementById('auditor').value;
+var encarregado  = document.getElementById('encarregado').value;
+var operador  = document.getElementById('operador').value;
+var am  = document.getElementById('am').value;
+var dsilo  = document.getElementById('dsilo').value;
+var dop  = document.getElementById('dop').value;
+var dft  = document.getElementById('dft').value;  
+//line2  
+var parte2  = document.getElementById('parte2').value;
+var ciclo  = document.getElementById('ciclo').value;
+var vacuo1  = document.getElementById('vacuo1').value;
+var vacuo2  = document.getElementById('vacuo2').value;
+var refri1  = document.getElementById('refri1').value;
+var refri2  = document.getElementById('refri2').value;
+//line3  
+var etiqueta1  = document.getElementById('etiqueta1').value;
+var umidade1  = document.getElementById('umidade1').value;
+var Solda1  = document.getElementById('Solda1').value;
+var pesomin1  = document.getElementById('pesomin1').value;
+var pesomax1  = document.getElementById('pesomax1').value;
+var pesoreal1  = document.getElementById('pesoreal1').value;
+var dimmin1  = document.getElementById('dimmin1').value;
+var dimmax1  = document.getElementById('dimmax1').value;
+var dimreal1  = document.getElementById('dimreal1').value;
+var cliche1  = document.getElementById('cliche1').value;
+var visual1  = document.getElementById('visual1').value;  
+//line4 
+var parte2 = document.getElementById('parte2').value; 
+var etiqueta2  = document.getElementById('etiqueta2').value;
+var umidade2  = document.getElementById('umidade2').value;
+var Solda2  = document.getElementById('Solda2').value;
+var pesomin2  = document.getElementById('pesomin2').value;
+var pesomax2  = document.getElementById('pesomax2').value;
+var pesoreal2  = document.getElementById('pesoreal2').value;
+var dimmin2  = document.getElementById('dimmin2').value;
+var dimmax2  = document.getElementById('dimmax2').value;
+var dimreal2  = document.getElementById('dimreal2').value;
+var cliche2  = document.getElementById('cliche2').value;
+var visual2  = document.getElementById('visual2').value;   
+//line5 
+var parte3 = document.getElementById('parte3').value; 
+var etiqueta3  = document.getElementById('etiqueta3').value;
+var umidade3  = document.getElementById('umidade3').value;
+var Solda3  = document.getElementById('Solda3').value;
+var pesomin3  = document.getElementById('pesomin3').value;
+var pesomax3  = document.getElementById('pesomax3').value;
+var pesoreal3  = document.getElementById('pesoreal3').value;
+var dimmin3  = document.getElementById('dimmin3').value;
+var dimmax3  = document.getElementById('dimmax3').value;
+var dimreal3  = document.getElementById('dimreal3').value;
+var cliche3  = document.getElementById('cliche3').value;
+var visual3  = document.getElementById('visual3').value;    
+  
+//line6 
+var parte4 = document.getElementById('parte4').value; 
+var etiqueta4  = document.getElementById('etiqueta4').value;
+var umidade4  = document.getElementById('umidade4').value;
+var Solda4  = document.getElementById('Solda4').value;
+var pesomin4  = document.getElementById('pesomin4').value;
+var pesomax4  = document.getElementById('pesomax4').value;
+var pesoreal4  = document.getElementById('pesoreal4').value;
+var dimmin4  = document.getElementById('dimmin4').value;
+var dimmax4  = document.getElementById('dimmax4').value;
+var dimreal4  = document.getElementById('dimreal4').value;
+var cliche4  = document.getElementById('cliche4').value;
+var visual4  = document.getElementById('visual4').value;  
+//line7 
+var parte5 = document.getElementById('parte5').value; 
+var etiqueta5  = document.getElementById('etiqueta5').value;
+var umidade5  = document.getElementById('umidade5').value;
+var Solda5  = document.getElementById('Solda5').value;
+var pesomin5  = document.getElementById('pesomin5').value;
+var pesomax5  = document.getElementById('pesomax5').value;
+var pesoreal5  = document.getElementById('pesoreal5').value;
+var dimmin5  = document.getElementById('dimmin5').value;
+var dimmax5  = document.getElementById('dimmax5').value;
+var dimreal5  = document.getElementById('dimreal5').value;
+var cliche5  = document.getElementById('cliche5').value;
+var visual5  = document.getElementById('visual5').value;  
+//line7
+var parte6 = document.getElementById('parte6').value; 
+var etiqueta6  = document.getElementById('etiqueta6').value;
+var umidade6  = document.getElementById('umidade6').value;
+var Solda6  = document.getElementById('Solda6').value;
+var pesomin6  = document.getElementById('pesomin6').value;
+var pesomax6  = document.getElementById('pesomax6').value;
+var pesoreal6  = document.getElementById('pesoreal6').value;
+var dimmin6  = document.getElementById('dimmin6').value;
+var dimmax6  = document.getElementById('dimmax6').value;
+var dimreal6  = document.getElementById('dimreal6').value;
+var cliche6  = document.getElementById('cliche6').value;
+var visual6  = document.getElementById('visual6').value;  
+
+if 
+   (auditor=="") {
+ alert("Nome do Auditor Não inserido");
+}
+if 
+   (encarregado=="") {
+ alert("Nome do Encarregado Não inserido");
+}
+if 
+   (operador=="") {
+ alert("Nome do Operador Não inserido");
+} 
+
+if 
+   (am==""){
+       alert("Inserir Código do Produto");
+}  
+else if (am.length<4||am.length>4) {
+ alert("Código Incorreto");
+}    
+if 
+   (ciclo=="") {
+ alert("Tempo de Ciclo Não Inserido");
+} 
+  
+if 
+   (dsilo=="") {
+ alert("Silo Não Selecionado");
+} 
+  
+if 
+   (dop=="") {
+ alert("Densidade de OP Não Inserida");
+}
+
+if 
+   (dft=="") {
+ alert("Densidade da Ficha Técnida Não Inserida");
+}   
+  
+if 
+   (vacuo1==""||vacuo2=="") {
+ alert("Valor de Vácuo Não Inserido");
+  
+} else if (vacuo1<0.5||vacuo2<0.5) {
+ alert("Valor de Vácuo Menor Que 0.5Bar REQUISITO NÃO CONFORME SOLICITAR AJUSTE");
+}    
+  
+  
+if 
+   (refri1==""||refri2=="") {
+ alert("Valor de Resfriamento Não Inserido");
+  
+} else if (refri1>5||refri2>5) {
+ alert("Valor de Resfriamento Maior Que 5,0 Seg\n REQUISITO NÃO CONFORME");
+}
+
+if 
+   (etiqueta1=="") {
+ alert("Dados da Etiqueta Parte1 Não Inserido");
+
+}   
+
+if 
+   (umidade1=="") {
+ alert("Valor de Umidade Parte1 Não Inserido");
+  
+} else if (umidade1>5) {
+ alert("Índice de Umidade Parte1 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
+} 
+
+if 
+   (Solda1=="") {
+ alert("Valor de Soldabilidade Parte1 Não Inserido");
+  
+} else if (Solda1<60) {
+ alert("Soldabilidade Parte1 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+} 
+  
+if 
+   (pesomin1==""||pesomax1=="") {
+ alert("Valores das Especificações dos Pesos Parte1 Não Inserido");
+}
+  
+if 
+   (pesoreal1=="") {
+ alert("Valor peso real Parte1 Não Inserido");
+  
+} else if (pesoreal1<pesomin1||pesoreal1>pesomax1) {
+ alert("Peso Fora da Especificação Parte1\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}
+  
+if 
+   (dimmin1==""||dimmax1=="") {
+ alert("Valores das Especificações das Dimensões Parte1 Não Inserido");
+}
+  
+if 
+   (dimreal1=="") {
+ alert("Valor dimensão real Parte1 Não Inserido");
+  
+} else if (dimreal1<dimmin1||dimreal1>dimmax1) {
+ alert("Dimensional Fora da Especificação Parte1\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}  
+  
+if 
+   (cliche1=="NOK") {
+ alert("Impressão do clichê ilegível Parte1.\n Parar produção e solicitar correção");
+}  
+  
+if 
+   (visual1=="NOK") {
+ alert("Requisito cosméstico Não Conforme Parte1.\n Parar produção e solicitar correção");
+}
+
+
+//reaction1
+if (parte2!="NA") {
+   
+if 
+   (umidade2=="") {
+ alert("Valor de Umidade Parte2 Não Inserido");
+  
+} else if (umidade2>5) {
+ alert("Índice de Umidade Parte2 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
+} 
+
+if 
+   (Solda2=="") {
+ alert("Valor de Soldabilidade Parte2 Não Inserido");
+  
+} else if (Solda2<60) {
+ alert("Soldabilidade Parte2 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+} 
+  
+if 
+   (pesomin2==""||pesomax2=="") {
+ alert("Valores das Especificações dos Pesos Parte2 Não Inserido");
+}
+  
+if 
+   (pesoreal2=="") {
+ alert("Valor peso real Parte2 Não Inserido");
+  
+} else if (pesoreal2<pesomin2||pesoreal2>pesomax2) {
+ alert("Peso Fora da Especificação Parte2\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}
+  
+if 
+   (dimmin2==""||dimmax2=="") {
+ alert("Valores das Especificações das Dimensões Parte2 Não Inserido");
+}
+  
+if 
+   (dimreal2=="") {
+ alert("Valor dimensão real Parte2 Não Inserido");
+  
+} else if (dimreal2<dimmin2||dimreal2>dimmax2) {
+ alert("Dimensional Fora da Especificação Parte2\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}  
+  
+if 
+   (cliche2=="NOK") {
+ alert("Impressão do clichê ilegível Parte2.\n Parar produção e solicitar correção");
+}  
+  
+if 
+   (visual2=="NOK") {
+ alert("Requisito cosméstico Não Conforme Parte2.\n Parar produção e solicitar correção");
+}
+  
+}//reaction1
+
+//reaction2
+if (parte3!="NA") {
+   
+if 
+   (umidade3=="") {
+ alert("Valor de Umidade Parte3 Não Inserido");
+  
+} else if (umidade3>5) {
+ alert("Índice de Umidade Parte3 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
+} 
+
+if 
+   (Solda3=="") {
+ alert("Valor de Soldabilidade Parte3 Não Inserido");
+  
+} else if (Solda3<60) {
+ alert("Soldabilidade Parte3 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+} 
+  
+if 
+   (pesomin3==""||pesomax3=="") {
+ alert("Valores das Especificações dos Pesos Parte3 Não Inserido");
+}
+  
+if 
+   (pesoreal3=="") {
+ alert("Valor peso real Parte3 Não Inserido");
+  
+} else if (pesoreal3<pesomin3||pesoreal3>pesomax3) {
+ alert("Peso Fora da Especificação Parte3\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}
+  
+if 
+   (dimmin3==""||dimmax3=="") {
+ alert("Valores das Especificações das Dimensões Parte3 Não Inserido");
+}
+  
+if 
+   (dimreal3=="") {
+ alert("Valor dimensão real Parte3 Não Inserido");
+  
+} else if (dimreal3<dimmin3||dimreal3>dimmax3) {
+ alert("Dimensional Fora da Especificação Parte3\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}  
+  
+if 
+   (cliche3=="NOK") {
+ alert("Impressão do clichê ilegível Parte3.\n Parar produção e solicitar correção");
+}  
+  
+if 
+   (visual3=="NOK") {
+ alert("Requisito cosméstico Não Conforme Parte3.\n Parar produção e solicitar correção");
+}
+  
+}//reaction2  
+
+//reaction3
+if (parte4!="NA") {
+   
+if 
+   (umidade4=="") {
+ alert("Valor de Umidade Parte4 Não Inserido");
+  
+} else if (umidade4>5) {
+ alert("Índice de Umidade Parte4 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
+} 
+
+if 
+   (Solda4=="") {
+ alert("Valor de Soldabilidade Parte4 Não Inserido");
+  
+} else if (Solda4<60) {
+ alert("Soldabilidade Parte4 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+} 
+  
+if 
+   (pesomin4==""||pesomax4=="") {
+ alert("Valores das Especificações dos Pesos Parte4 Não Inserido");
+}
+  
+if 
+   (pesoreal4=="") {
+ alert("Valor peso real Parte4 Não Inserido");
+  
+} else if (pesoreal4<pesomin4||pesoreal4>pesomax4) {
+ alert("Peso Fora da Especificação Parte4\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}
+  
+if 
+   (dimmin4==""||dimmax4=="") {
+ alert("Valores das Especificações das Dimensões Parte4 Não Inserido");
+}
+  
+if 
+   (dimreal4=="") {
+ alert("Valor dimensão real Parte4 Não Inserido");
+  
+} else if (dimreal4<dimmin4||dimreal4>dimmax4) {
+ alert("Dimensional Fora da Especificação Parte4\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}  
+  
+if 
+   (cliche4=="NOK") {
+ alert("Impressão do clichê ilegível Parte4.\n Parar produção e solicitar correção");
+}  
+  
+if 
+   (visual4=="NOK") {
+ alert("Requisito cosméstico Não Conforme Parte4.\n Parar produção e solicitar correção");
+}
+  
+}//reaction3
+  
+//reaction4
+if (parte5!="NA") {
+   
+if 
+   (umidade5=="") {
+ alert("Valor de Umidade Parte5 Não Inserido");
+  
+} else if (umidade5>5) {
+ alert("Índice de Umidade Parte5 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
+} 
+
+if 
+   (Solda5=="") {
+ alert("Valor de Soldabilidade Parte5 Não Inserido");
+  
+} else if (Solda5<60) {
+ alert("Soldabilidade Parte5 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+} 
+  
+if 
+   (pesomin5==""||pesomax5=="") {
+ alert("Valores das Especificações dos Pesos Parte5 Não Inserido");
+}
+  
+if 
+   (pesoreal5=="") {
+ alert("Valor peso real Parte5 Não Inserido");
+  
+} else if (pesoreal5<pesomin5||pesoreal5>pesomax5) {
+ alert("Peso Fora da Especificação Parte5\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}
+  
+if 
+   (dimmin5==""||dimmax5=="") {
+ alert("Valores das Especificações das Dimensões Parte5 Não Inserido");
+}
+  
+if 
+   (dimreal5=="") {
+ alert("Valor dimensão real Parte5 Não Inserido");
+  
+} else if (dimreal5<dimmin5||dimreal5>dimmax5) {
+ alert("Dimensional Fora da Especificação Parte5\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}  
+  
+if 
+   (cliche5=="NOK") {
+ alert("Impressão do clichê ilegível Parte5.\n Parar produção e solicitar correção");
+}  
+  
+if 
+   (visual5=="NOK") {
+ alert("Requisito cosméstico Não Conforme Parte5.\n Parar produção e solicitar correção");
+}
+  
+}//reaction4  
+  
+//reaction5
+if (parte6!="NA") {
+   
+if 
+   (umidade6=="") {
+ alert("Valor de Umidade Parte6 Não Inserido");
+  
+} else if (umidade6>5) {
+ alert("Índice de Umidade Parte6 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
+} 
+
+if 
+   (Solda6=="") {
+ alert("Valor de Soldabilidade Parte6 Não Inserido");
+  
+} else if (Solda6<60) {
+ alert("Soldabilidade Parte6 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+} 
+  
+if 
+   (pesomin6==""||pesomax6=="") {
+ alert("Valores das Especificações dos Pesos Parte6 Não Inserido");
+}
+  
+if 
+   (pesoreal6=="") {
+ alert("Valor peso real Parte6 Não Inserido");
+  
+} else if (pesoreal5<pesomin6||pesoreal6>pesomax5) {
+ alert("Peso Fora da Especificação Parte6\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}
+  
+if 
+   (dimmin6==""||dimmax6=="") {
+ alert("Valores das Especificações das Dimensões Parte6 Não Inserido");
+}
+  
+if 
+   (dimreal6=="") {
+ alert("Valor dimensão real Parte6 Não Inserido");
+  
+} else if (dimreal6<dimmin6||dimreal6>dimmax6) {
+ alert("Dimensional Fora da Especificação Parte6\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
+}  
+  
+if 
+   (cliche6=="NOK") {
+ alert("Impressão do clichê ilegível Parte6.\n Parar produção e solicitar correção");
+}  
+  
+if 
+   (visual6=="NOK") {
+ alert("Requisito cosméstico Não Conforme Parte6.\n Parar produção e solicitar correção");
+}
+  
+}//reaction5  
+  
+  
+  
+}//Main
+ 
+
+function datarecord() {  
+alert("Data Record");
+  
+} 
+
+
+//Time
+function myTime() {
+const d = new Date();
+month = '' + (d.getMonth() + 1),
+day = '' + d.getDate(),
+year = d.getFullYear();
+if (month.length < 2) month = '0' + month;
+if (day.length < 2) day = '0' + day;  
+document.getElementById("data").innerHTML = day+"/"+month+"/"+year;  
+}    
+
+
+
+
+</script>
+
+</html>  
