@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta charset="utf-8">  
 <body onload="myTime()">
 <title>Estrutura Base</title>
-<meta http-equiv=îContent-Typeî content=îtext/html; charset=iso-8859-1?>
+<meta http-equiv=‚ÄùContent-Type‚Äù content=‚Äùtext/html; charset=iso-8859-1?>
 </head>
 
 <style>
@@ -265,7 +266,7 @@ fill:white;
 <label>Auditor</label>
 <label>Encarregado</label>
 <label>Operador</label>
-<label>Tp. InspeÁ„o</label>
+<label>Tp. Inspe√ß√£o</label>
 <!-- line-one class="col-xs-12" -->  
 </div>  
 <div class="line-two">
@@ -289,7 +290,7 @@ fill:white;
   
 <div class="line-three">
 <label>AM</label>
-<label>M·quina</label>
+<label>M√°quina</label>
 <label>Silo</label>
 <label>Dens. Silo</label>
 <label>Dens. OP</label>
@@ -339,8 +340,8 @@ value="25">25</option>
 </div> 
 <div class="line-five">
 <label>Tp. de Ciclo</label>
-<label>V·cuo 1 (-)</label>
-<label>V·cuo 2 (-)</label>
+<label>V√°cuo 1 (-)</label>
+<label>V√°cuo 2 (-)</label>
 <label>Refri. 1</label>
 <label>Refri. 2</label>
 <label></label>
@@ -367,7 +368,7 @@ value="25">25</option>
 <label>Dimen. Min</label>  
 <label>Dimen. Max</label>
 <label>Dimen. Real</label>
-<label>ClichÍs</label>
+<label>Clich√™s</label>
 <label>Visual</label>
 
  <select id="parte1">
@@ -514,7 +515,7 @@ value="25">25</option>
 <!-- line-seven  -->  
 </div>  
 <div class="line-eight">
-<label>ObservaÁıes</label>
+<label>Observa√ß√µes</label>
 <input type="text" id="observacao">  
 <!-- line-eight -->  
 </div> 
@@ -645,117 +646,117 @@ var visual6  = document.getElementById('visual6').value;
 
 if 
    (auditor=="") {
- alert("Nome do Auditor N„o inserido");
+ alert("Nome do Auditor N√£o inserido");
 }
 if 
    (encarregado=="") {
- alert("Nome do Encarregado N„o inserido");
+ alert("Nome do Encarregado N√£o inserido");
 }
 if 
    (operador=="") {
- alert("Nome do Operador N„o inserido");
+ alert("Nome do Operador N√£o inserido");
 } 
 
 if 
    (am==""){
-       alert("Inserir CÛdigo do Produto");
+       alert("Inserir C√≥digo do Produto");
 }  
 else if (am.length<4||am.length>4) {
- alert("CÛdigo Incorreto");
+ alert("C√≥digo Incorreto");
 }    
 if 
    (ciclo=="") {
- alert("Tempo de Ciclo N„o Inserido");
+ alert("Tempo de Ciclo N√£o Inserido");
 } 
   
 if 
    (dsilo=="") {
- alert("Silo N„o Selecionado");
+ alert("Silo N√£o Selecionado");
 } 
   
 if 
    (dop=="") {
- alert("Densidade de OP N„o Inserida");
+ alert("Densidade de OP N√£o Inserida");
 }
 
 if 
    (dft=="") {
- alert("Densidade da Ficha TÈcnida N„o Inserida");
+ alert("Densidade da Ficha T√©cnida N√£o Inserida");
 }   
   
 if 
    (vacuo1==""||vacuo2=="") {
- alert("Valor de V·cuo N„o Inserido");
+ alert("Valor de V√°cuo N√£o Inserido");
   
 } else if (vacuo1<0.5||vacuo2<0.5) {
- alert("Valor de V·cuo Menor Que 0.5Bar REQUISITO N√O CONFORME SOLICITAR AJUSTE");
+ alert("Valor de V√°cuo Menor Que 0.5Bar REQUISITO N√ÉO CONFORME SOLICITAR AJUSTE");
 }    
   
   
 if 
    (refri1==""||refri2=="") {
- alert("Valor de Resfriamento N„o Inserido");
+ alert("Valor de Resfriamento N√£o Inserido");
   
 } else if (refri1>5||refri2>5) {
- alert("Valor de Resfriamento Maior Que 5,0 Seg\n REQUISITO N√O CONFORME");
+ alert("Valor de Resfriamento Maior Que 5,0 Seg\n REQUISITO N√ÉO CONFORME");
 }
 
 if 
    (etiqueta1=="") {
- alert("Dados da Etiqueta Parte1 N„o Inserido");
+ alert("Dados da Etiqueta Parte1 N√£o Inserido");
 
 }   
 
 if 
    (umidade1=="") {
- alert("Valor de Umidade Parte1 N„o Inserido");
+ alert("Valor de Umidade Parte1 N√£o Inserido");
   
 } else if (umidade1>5) {
- alert("Õndice de Umidade Parte1 Maior Que 5% \n SOLICITAR AJUSTE NA M¡QUINA");
+ alert("√çndice de Umidade Parte1 Maior Que 5% \n SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
 
 if 
    (Solda1=="") {
- alert("Valor de Soldabilidade Parte1 N„o Inserido");
+ alert("Valor de Soldabilidade Parte1 N√£o Inserido");
   
 } else if (Solda1<60) {
- alert("Soldabilidade Parte1 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Soldabilidade Parte1 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
   
 if 
    (pesomin1==""||pesomax1=="") {
- alert("Valores das EspecificaÁıes dos Pesos Parte1 N„o Inserido");
+ alert("Valores das Especifica√ß√µes dos Pesos Parte1 N√£o Inserido");
 }
   
 if 
    (pesoreal1=="") {
- alert("Valor peso real Parte1 N„o Inserido");
+ alert("Valor peso real Parte1 N√£o Inserido");
   
 } else if (pesoreal1<pesomin1||pesoreal1>pesomax1) {
- alert("Peso Fora da EspecificaÁ„o Parte1\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Peso Fora da Especifica√ß√£o Parte1\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }
   
 if 
    (dimmin1==""||dimmax1=="") {
- alert("Valores das EspecificaÁıes das Dimensıes Parte1 N„o Inserido");
+ alert("Valores das Especifica√ß√µes das Dimens√µes Parte1 N√£o Inserido");
 }
   
 if 
    (dimreal1=="") {
- alert("Valor dimens„o real Parte1 N„o Inserido");
+ alert("Valor dimens√£o real Parte1 N√£o Inserido");
   
 } else if (dimreal1<dimmin1||dimreal1>dimmax1) {
- alert("Dimensional Fora da EspecificaÁ„o Parte1\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Dimensional Fora da Especifica√ß√£o Parte1\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }  
   
 if 
    (cliche1=="NOK") {
- alert("Impress„o do clichÍ ilegÌvel Parte1.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Impress√£o do clich√™ ileg√≠vel Parte1.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }  
   
 if 
    (visual1=="NOK") {
- alert("Requisito cosmÈstico N„o Conforme Parte1.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Requisito cosm√©stico N√£o Conforme Parte1.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }
 
 
@@ -764,54 +765,54 @@ if (parte2!="NA") {
    
 if 
    (umidade2=="") {
- alert("Valor de Umidade Parte2 N„o Inserido");
+ alert("Valor de Umidade Parte2 N√£o Inserido");
   
 } else if (umidade2>5) {
- alert("Õndice de Umidade Parte2 Maior Que 5% \n SOLICITAR AJUSTE NA M¡QUINA");
+ alert("√çndice de Umidade Parte2 Maior Que 5% \n SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
 
 if 
    (Solda2=="") {
- alert("Valor de Soldabilidade Parte2 N„o Inserido");
+ alert("Valor de Soldabilidade Parte2 N√£o Inserido");
   
 } else if (Solda2<60) {
- alert("Soldabilidade Parte2 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Soldabilidade Parte2 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
   
 if 
    (pesomin2==""||pesomax2=="") {
- alert("Valores das EspecificaÁıes dos Pesos Parte2 N„o Inserido");
+ alert("Valores das Especifica√ß√µes dos Pesos Parte2 N√£o Inserido");
 }
   
 if 
    (pesoreal2=="") {
- alert("Valor peso real Parte2 N„o Inserido");
+ alert("Valor peso real Parte2 N√£o Inserido");
   
 } else if (pesoreal2<pesomin2||pesoreal2>pesomax2) {
- alert("Peso Fora da EspecificaÁ„o Parte2\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Peso Fora da Especifica√ß√£o Parte2\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }
   
 if 
    (dimmin2==""||dimmax2=="") {
- alert("Valores das EspecificaÁıes das Dimensıes Parte2 N„o Inserido");
+ alert("Valores das Especifica√ß√µes das Dimens√µes Parte2 N√£o Inserido");
 }
   
 if 
    (dimreal2=="") {
- alert("Valor dimens„o real Parte2 N„o Inserido");
+ alert("Valor dimens√£o real Parte2 N√£o Inserido");
   
 } else if (dimreal2<dimmin2||dimreal2>dimmax2) {
- alert("Dimensional Fora da EspecificaÁ„o Parte2\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Dimensional Fora da Especifica√ß√£o Parte2\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }  
   
 if 
    (cliche2=="NOK") {
- alert("Impress„o do clichÍ ilegÌvel Parte2.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Impress√£o do clich√™ ileg√≠vel Parte2.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }  
   
 if 
    (visual2=="NOK") {
- alert("Requisito cosmÈstico N„o Conforme Parte2.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Requisito cosm√©stico N√£o Conforme Parte2.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }
   
 }//reaction1
@@ -821,54 +822,54 @@ if (parte3!="NA") {
    
 if 
    (umidade3=="") {
- alert("Valor de Umidade Parte3 N„o Inserido");
+ alert("Valor de Umidade Parte3 N√£o Inserido");
   
 } else if (umidade3>5) {
- alert("Õndice de Umidade Parte3 Maior Que 5% \n SOLICITAR AJUSTE NA M¡QUINA");
+ alert("√çndice de Umidade Parte3 Maior Que 5% \n SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
 
 if 
    (Solda3=="") {
- alert("Valor de Soldabilidade Parte3 N„o Inserido");
+ alert("Valor de Soldabilidade Parte3 N√£o Inserido");
   
 } else if (Solda3<60) {
- alert("Soldabilidade Parte3 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Soldabilidade Parte3 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
   
 if 
    (pesomin3==""||pesomax3=="") {
- alert("Valores das EspecificaÁıes dos Pesos Parte3 N„o Inserido");
+ alert("Valores das Especifica√ß√µes dos Pesos Parte3 N√£o Inserido");
 }
   
 if 
    (pesoreal3=="") {
- alert("Valor peso real Parte3 N„o Inserido");
+ alert("Valor peso real Parte3 N√£o Inserido");
   
 } else if (pesoreal3<pesomin3||pesoreal3>pesomax3) {
- alert("Peso Fora da EspecificaÁ„o Parte3\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Peso Fora da Especifica√ß√£o Parte3\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }
   
 if 
    (dimmin3==""||dimmax3=="") {
- alert("Valores das EspecificaÁıes das Dimensıes Parte3 N„o Inserido");
+ alert("Valores das Especifica√ß√µes das Dimens√µes Parte3 N√£o Inserido");
 }
   
 if 
    (dimreal3=="") {
- alert("Valor dimens„o real Parte3 N„o Inserido");
+ alert("Valor dimens√£o real Parte3 N√£o Inserido");
   
 } else if (dimreal3<dimmin3||dimreal3>dimmax3) {
- alert("Dimensional Fora da EspecificaÁ„o Parte3\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Dimensional Fora da Especifica√ß√£o Parte3\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }  
   
 if 
    (cliche3=="NOK") {
- alert("Impress„o do clichÍ ilegÌvel Parte3.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Impress√£o do clich√™ ileg√≠vel Parte3.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }  
   
 if 
    (visual3=="NOK") {
- alert("Requisito cosmÈstico N„o Conforme Parte3.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Requisito cosm√©stico N√£o Conforme Parte3.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }
   
 }//reaction2  
@@ -878,54 +879,54 @@ if (parte4!="NA") {
    
 if 
    (umidade4=="") {
- alert("Valor de Umidade Parte4 N„o Inserido");
+ alert("Valor de Umidade Parte4 N√£o Inserido");
   
 } else if (umidade4>5) {
- alert("Õndice de Umidade Parte4 Maior Que 5% \n SOLICITAR AJUSTE NA M¡QUINA");
+ alert("√çndice de Umidade Parte4 Maior Que 5% \n SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
 
 if 
    (Solda4=="") {
- alert("Valor de Soldabilidade Parte4 N„o Inserido");
+ alert("Valor de Soldabilidade Parte4 N√£o Inserido");
   
 } else if (Solda4<60) {
- alert("Soldabilidade Parte4 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Soldabilidade Parte4 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
   
 if 
    (pesomin4==""||pesomax4=="") {
- alert("Valores das EspecificaÁıes dos Pesos Parte4 N„o Inserido");
+ alert("Valores das Especifica√ß√µes dos Pesos Parte4 N√£o Inserido");
 }
   
 if 
    (pesoreal4=="") {
- alert("Valor peso real Parte4 N„o Inserido");
+ alert("Valor peso real Parte4 N√£o Inserido");
   
 } else if (pesoreal4<pesomin4||pesoreal4>pesomax4) {
- alert("Peso Fora da EspecificaÁ„o Parte4\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Peso Fora da Especifica√ß√£o Parte4\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }
   
 if 
    (dimmin4==""||dimmax4=="") {
- alert("Valores das EspecificaÁıes das Dimensıes Parte4 N„o Inserido");
+ alert("Valores das Especifica√ß√µes das Dimens√µes Parte4 N√£o Inserido");
 }
   
 if 
    (dimreal4=="") {
- alert("Valor dimens„o real Parte4 N„o Inserido");
+ alert("Valor dimens√£o real Parte4 N√£o Inserido");
   
 } else if (dimreal4<dimmin4||dimreal4>dimmax4) {
- alert("Dimensional Fora da EspecificaÁ„o Parte4\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Dimensional Fora da Especifica√ß√£o Parte4\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }  
   
 if 
    (cliche4=="NOK") {
- alert("Impress„o do clichÍ ilegÌvel Parte4.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Impress√£o do clich√™ ileg√≠vel Parte4.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }  
   
 if 
    (visual4=="NOK") {
- alert("Requisito cosmÈstico N„o Conforme Parte4.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Requisito cosm√©stico N√£o Conforme Parte4.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }
   
 }//reaction3
@@ -935,54 +936,54 @@ if (parte5!="NA") {
    
 if 
    (umidade5=="") {
- alert("Valor de Umidade Parte5 N„o Inserido");
+ alert("Valor de Umidade Parte5 N√£o Inserido");
   
 } else if (umidade5>5) {
- alert("Õndice de Umidade Parte5 Maior Que 5% \n SOLICITAR AJUSTE NA M¡QUINA");
+ alert("√çndice de Umidade Parte5 Maior Que 5% \n SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
 
 if 
    (Solda5=="") {
- alert("Valor de Soldabilidade Parte5 N„o Inserido");
+ alert("Valor de Soldabilidade Parte5 N√£o Inserido");
   
 } else if (Solda5<60) {
- alert("Soldabilidade Parte5 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Soldabilidade Parte5 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
   
 if 
    (pesomin5==""||pesomax5=="") {
- alert("Valores das EspecificaÁıes dos Pesos Parte5 N„o Inserido");
+ alert("Valores das Especifica√ß√µes dos Pesos Parte5 N√£o Inserido");
 }
   
 if 
    (pesoreal5=="") {
- alert("Valor peso real Parte5 N„o Inserido");
+ alert("Valor peso real Parte5 N√£o Inserido");
   
 } else if (pesoreal5<pesomin5||pesoreal5>pesomax5) {
- alert("Peso Fora da EspecificaÁ„o Parte5\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Peso Fora da Especifica√ß√£o Parte5\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }
   
 if 
    (dimmin5==""||dimmax5=="") {
- alert("Valores das EspecificaÁıes das Dimensıes Parte5 N„o Inserido");
+ alert("Valores das Especifica√ß√µes das Dimens√µes Parte5 N√£o Inserido");
 }
   
 if 
    (dimreal5=="") {
- alert("Valor dimens„o real Parte5 N„o Inserido");
+ alert("Valor dimens√£o real Parte5 N√£o Inserido");
   
 } else if (dimreal5<dimmin5||dimreal5>dimmax5) {
- alert("Dimensional Fora da EspecificaÁ„o Parte5\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Dimensional Fora da Especifica√ß√£o Parte5\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }  
   
 if 
    (cliche5=="NOK") {
- alert("Impress„o do clichÍ ilegÌvel Parte5.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Impress√£o do clich√™ ileg√≠vel Parte5.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }  
   
 if 
    (visual5=="NOK") {
- alert("Requisito cosmÈstico N„o Conforme Parte5.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Requisito cosm√©stico N√£o Conforme Parte5.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }
   
 }//reaction4  
@@ -992,54 +993,54 @@ if (parte6!="NA") {
    
 if 
    (umidade6=="") {
- alert("Valor de Umidade Parte6 N„o Inserido");
+ alert("Valor de Umidade Parte6 N√£o Inserido");
   
 } else if (umidade6>5) {
- alert("Õndice de Umidade Parte6 Maior Que 5% \n SOLICITAR AJUSTE NA M¡QUINA");
+ alert("√çndice de Umidade Parte6 Maior Que 5% \n SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
 
 if 
    (Solda6=="") {
- alert("Valor de Soldabilidade Parte6 N„o Inserido");
+ alert("Valor de Soldabilidade Parte6 N√£o Inserido");
   
 } else if (Solda6<60) {
- alert("Soldabilidade Parte6 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Soldabilidade Parte6 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 } 
   
 if 
    (pesomin6==""||pesomax6=="") {
- alert("Valores das EspecificaÁıes dos Pesos Parte6 N„o Inserido");
+ alert("Valores das Especifica√ß√µes dos Pesos Parte6 N√£o Inserido");
 }
   
 if 
    (pesoreal6=="") {
- alert("Valor peso real Parte6 N„o Inserido");
+ alert("Valor peso real Parte6 N√£o Inserido");
   
 } else if (pesoreal5<pesomin6||pesoreal6>pesomax5) {
- alert("Peso Fora da EspecificaÁ„o Parte6\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Peso Fora da Especifica√ß√£o Parte6\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }
   
 if 
    (dimmin6==""||dimmax6=="") {
- alert("Valores das EspecificaÁıes das Dimensıes Parte6 N„o Inserido");
+ alert("Valores das Especifica√ß√µes das Dimens√µes Parte6 N√£o Inserido");
 }
   
 if 
    (dimreal6=="") {
- alert("Valor dimens„o real Parte6 N„o Inserido");
+ alert("Valor dimens√£o real Parte6 N√£o Inserido");
   
 } else if (dimreal6<dimmin6||dimreal6>dimmax6) {
- alert("Dimensional Fora da EspecificaÁ„o Parte6\n PARAR PROCESSO, SOLICITAR AJUSTE NA M¡QUINA");
+ alert("Dimensional Fora da Especifica√ß√£o Parte6\n PARAR PROCESSO, SOLICITAR AJUSTE NA M√ÅQUINA");
 }  
   
 if 
    (cliche6=="NOK") {
- alert("Impress„o do clichÍ ilegÌvel Parte6.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Impress√£o do clich√™ ileg√≠vel Parte6.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }  
   
 if 
    (visual6=="NOK") {
- alert("Requisito cosmÈstico N„o Conforme Parte6.\n Parar produÁ„o e solicitar correÁ„o");
+ alert("Requisito cosm√©stico N√£o Conforme Parte6.\n Parar produ√ß√£o e solicitar corre√ß√£o");
 }
   
 }//reaction5  
