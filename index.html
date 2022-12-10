@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -549,7 +550,7 @@ value="25">25</option>
 
 <script>
   
-function validateInspec() {//main
+function validateInspec() {//main  
 
 var auditor  = document.getElementById('auditor').value;
 var encarregado  = document.getElementById('encarregado').value;
@@ -559,13 +560,13 @@ var dsilo  = document.getElementById('dsilo').value;
 var dop  = document.getElementById('dop').value;
 var dft  = document.getElementById('dft').value;  
 //line2  
-var parte2  = document.getElementById('parte2').value;
 var ciclo  = document.getElementById('ciclo').value;
 var vacuo1  = document.getElementById('vacuo1').value;
 var vacuo2  = document.getElementById('vacuo2').value;
 var refri1  = document.getElementById('refri1').value;
 var refri2  = document.getElementById('refri2').value;
 //line3  
+var parte1  = document.getElementById('parte1').value;  
 var etiqueta1  = document.getElementById('etiqueta1').value;
 var umidade1  = document.getElementById('umidade1').value;
 var Solda1  = document.getElementById('Solda1').value;
@@ -643,6 +644,7 @@ var dimmax6  = document.getElementById('dimmax6').value;
 var dimreal6  = document.getElementById('dimreal6').value;
 var cliche6  = document.getElementById('cliche6').value;
 var visual6  = document.getElementById('visual6').value;  
+
 
 if 
    (auditor=="") {
@@ -1046,7 +1048,8 @@ if
  
 }//reaction5  
   
-window.AppInventor.setWebViewString(auditor);     
+window.AppInventor.setWebViewString(Array(auditor,encarregado,operador,am,dsilo,dop,parte1,ciclo,vacuo1,vacuo2,refri1,refri2));     
+///alert(Array(auditor,encarregado,operador,am,dsilo,dop,parte1,ciclo,vacuo1,vacuo2,refri1,refri2));
   
 }//Main
  
