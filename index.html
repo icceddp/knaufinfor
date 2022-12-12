@@ -1048,19 +1048,14 @@ if
  
 }//reaction5  
 
-var aCustomers=new Array();
-    aCustomers[0]="Frank Sinatra ";
-    aCustomers[1]="Bob Villa ";
-    aCustomers[2]="Kurt Cobain ";
-    aCustomers[3]="Tom Cruise ";
-    aCustomers[4]="Tim Robbins ";
-    aCustomers[5]="Santa Claus ";
-    aCustomers[6]="Easter Bunny ";
-    aCustomers[7]="Clark Kent ";
-    aCustomers[8]="Marry Poppins ";
-    aCustomers[9]="John Wayne ";
+var list = [
+    { auditor:auditor,encarregado:encarregado,operador:operador,am:am, dsilo:dsilo,dop:dop,ciclo:ciclo,vacuo1:vacuo1,vacuo2:vacuo2,refri1:refri1,refri2:refri2,parte1:parte1},
+   
+];
 
-window.AppInventor.setWebViewString(JSON.stringify(aCustomers));     
+
+
+window.AppInventor.setWebViewString(JSON.stringify(list));     
 
   
 }//Main
