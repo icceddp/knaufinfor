@@ -1047,9 +1047,15 @@ if
 
  
 }//reaction5  
-  
-window.AppInventor.setWebViewString(Array(auditor,encarregado,operador,am,dsilo,dop,parte1,ciclo,vacuo1,vacuo2,refri1,refri2));     
-///alert(Array(auditor,encarregado,operador,am,dsilo,dop,parte1,ciclo,vacuo1,vacuo2,refri1,refri2));
+
+var list = [
+    { date: '12/1/2011', reading: 3, id: 20055 },
+    { date: '13/1/2011', reading: 5, id: 20053 },
+    { date: '14/1/2011', reading: 6, id: 45652 }
+];  
+
+window.AppInventor.setWebViewString(list[1].date);     
+
   
 }//Main
  
