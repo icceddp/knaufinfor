@@ -1048,13 +1048,19 @@ if
  
 }//reaction5  
 
-var list = [
-    { date: '12/1/2011', reading: 3, id: 20055 },
-    { date: '13/1/2011', reading: 5, id: 20053 },
-    { date: '14/1/2011', reading: 6, id: 45652 }
-];  
+var aCustomers=new Array();
+    aCustomers[0]="Frank Sinatra ";
+    aCustomers[1]="Bob Villa ";
+    aCustomers[2]="Kurt Cobain ";
+    aCustomers[3]="Tom Cruise ";
+    aCustomers[4]="Tim Robbins ";
+    aCustomers[5]="Santa Claus ";
+    aCustomers[6]="Easter Bunny ";
+    aCustomers[7]="Clark Kent ";
+    aCustomers[8]="Marry Poppins ";
+    aCustomers[9]="John Wayne ";
 
-window.AppInventor.setWebViewString(list[1].date);     
+window.AppInventor.setWebViewString(JSON.stringify(aCustomers));     
 
   
 }//Main
