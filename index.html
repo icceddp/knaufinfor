@@ -1069,10 +1069,15 @@ alert("Data Record");
 //fillsilo  
 function silodens() {
 
-var danilo = window.AppInventor.getWebViewString();
-    
-alert(danilo +" Selecionado");
-document.getElementById('dsilo').value = danilo;   
+//const danilo = window.AppInventor.getWebViewString();
+
+const silo = window.AppInventor.getWebViewString();
+
+  
+const siloselect = document.getElementById('silo').value;
+  
+alert(silo[siloselect] +" Selecionado");
+document.getElementById('dsilo').value = silo[siloselect];   
 }  
   
   
