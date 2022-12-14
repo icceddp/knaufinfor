@@ -1066,20 +1066,16 @@ function datarecord() {
 alert("Data Record");  
 } 
 
+//fillsilo  
 function silodens() {
 
-var listch = [
-    {schneiden:1},
-   
-];
-
-
-window.AppInventor.setWebViewString(JSON.stringify(listch));   
 var danilo = window.AppInventor.getWebViewString();
     
 alert(danilo +" Selecionado");
 document.getElementById('dsilo').innerHTML = danilo;   
 }  
+  
+  
 
 //Time
 function myTime() {
