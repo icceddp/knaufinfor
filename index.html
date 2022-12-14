@@ -328,7 +328,7 @@ fill:white;
 value="25">25</option>
   <option value="26">26</option>   
 </select>
-<select id="silo">
+<select id="silo" onchange="silodens()">
   <option value="A1">A1</option>
   <option value="A2">A2</option>
   <option value="A3">A3</option>
@@ -1063,11 +1063,23 @@ window.AppInventor.setWebViewString(JSON.stringify(list));
  
 
 function datarecord() {  
-alert("Data Record");
-
-  
+alert("Data Record");  
 } 
 
+function silodens() {
+
+var listch = [
+    {schneiden:1},
+   
+];
+
+
+window.AppInventor.setWebViewString(JSON.stringify(listch));   
+var danilo = window.AppInventor.getWebViewString();
+    
+alert(danilo +" Selecionado");
+document.getElementById("dsilo").value = danilo  
+}  
 
 //Time
 function myTime() {
