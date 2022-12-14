@@ -1069,7 +1069,6 @@ alert("Data Record");
 //fillsilo  
 function silodens() {
 
-//const danilo = window.AppInventor.getWebViewString();
 
 const silo = window.AppInventor.getWebViewString();
 
@@ -1077,7 +1076,9 @@ const silo = window.AppInventor.getWebViewString();
 const siloselect = document.getElementById('silo').value;
   
 alert(silo[siloselect] +" Selecionado");
-document.getElementById('dsilo').value = silo[siloselect];   
+document.getElementById('dsilo').value = silo[siloselect];
+document.getElementById("observacao").value = silo;  
+  
 }  
   
   
