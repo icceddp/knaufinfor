@@ -1084,14 +1084,12 @@ document.getElementById("observacao").value = silo;
 } 
   
 function machine(){
-const machining = [
-    {schneiden:1,machine1:"teste"}
-   
-];
+const machining = {schneiden:1,machine1:"teste"};
+const inmachine = JSON.parse(window.AppInventor.getWebViewString());    
+  
 window.AppInventor.setWebViewString(JSON.stringify(machining)); 
 
-const inmachine = JSON.parse(window.AppInventor.getWebViewString());    
-document.getElementById("observacao").value = inmachine.M1;      
+document.getElementById("observacao").value = JSON.stringify(inmachine);      
 
   
   
