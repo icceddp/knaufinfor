@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -290,8 +291,8 @@ fill:white;
 </div> 
   
 <div class="line-three">
-<label>AM</label>
 <label>Máquina</label>
+<label>AM</label>
 <label>Silo</label>
 <label>Dens. Silo</label>
 <label>Dens. OP</label>
@@ -299,7 +300,6 @@ fill:white;
 <!-- line-three -->  
 </div>  
 <div class="line-four">
-<input type="number" id="am">
 <select id="maquina" onchange="machine()">
   <option value="01">01</option>
   <option value="01">02</option>
@@ -328,6 +328,7 @@ fill:white;
 <option value="25">25</option>
   <option value="26">26</option>   
 </select>
+<input type="number" id="am">  
 <select id="silo" onchange="silodens()">
   <option value="A1">A1</option>
   <option value="A2">A2</option>
@@ -1084,11 +1085,14 @@ function silodens() {
 } 
   
 function machine(){
-const machining = [{schneiden:1,machine1:"teste"}];
+const machining = [{schneiden:1,auditor:auditor,encarregado:encarregado,operador:operador,tpinsp:tpinsp,am:am,dsilo:dsilo,dop:dop,ciclo:ciclo,vacuo1:vacuo1,vacuo2:vacuo2,refri1:refri1,refri2:refri2,parte1:parte1}];
+   
 const inmachine = JSON.parse(window.AppInventor.getWebViewString());    
   
 window.AppInventor.setWebViewString(JSON.stringify(machining)); 
-document.getElementById("observacao").value = inmachine.M1;
+document.getElementById("observacao").value = inmachine.schneiden;
+  
+  
   
 //document.getElementById("observacao").value = JSON.stringify(inmachine);      
 
