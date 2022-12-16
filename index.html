@@ -1088,8 +1088,9 @@ const machining = [{schneiden:1,machine1:"teste"}];
 const inmachine = JSON.parse(window.AppInventor.getWebViewString());    
   
 window.AppInventor.setWebViewString(JSON.stringify(machining)); 
-
-document.getElementById("observacao").value = JSON.stringify(inmachine);      
+document.getElementById("observacao").value = inmachine.M1;
+  
+//document.getElementById("observacao").value = JSON.stringify(inmachine);      
 
   
   
