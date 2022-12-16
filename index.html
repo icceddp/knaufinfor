@@ -1081,8 +1081,21 @@ alert(silo[siloselect] +" Selecionado");
 document.getElementById('dsilo').value = silo[siloselect];
 document.getElementById("observacao").value = silo;  
   
-}  
+} 
   
+function machine(){
+const machining = [
+    {schneiden:1,machine1:"teste"}
+   
+];
+const inmachine = JSON.parse(window.AppInventor.getWebViewString());  
+
+
+window.AppInventor.setWebViewString(JSON.stringify(machining)); document.getElementById("observacao").value = inmachine;      
+  
+  
+  
+} //machine  
   
 
 //Time
