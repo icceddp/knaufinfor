@@ -300,7 +300,7 @@ fill:white;
 </div>  
 <div class="line-four">
 <input type="number" id="am">
-<select id="maquina">
+<select id="maquina" onchange="machine()">
   <option value="01">01</option>
   <option value="01">02</option>
   <option value="03">03</option>
@@ -325,7 +325,7 @@ fill:white;
 <option value="22">22</option>
   <option value="23">23</option>
   <option value="24">24</option> 
-value="25">25</option>
+<option value="25">25</option>
   <option value="26">26</option>   
 </select>
 <select id="silo" onchange="silodens()">
@@ -1088,10 +1088,10 @@ const machining = [
     {schneiden:1,machine1:"teste"}
    
 ];
-const inmachine = JSON.parse(window.AppInventor.getWebViewString());  
+window.AppInventor.setWebViewString(JSON.stringify(machining)); 
 
-
-window.AppInventor.setWebViewString(JSON.stringify(machining)); document.getElementById("observacao").value = inmachine;      
+const inmachine = JSON.parse(window.AppInventor.getWebViewString());    
+document.getElementById("observacao").value = inmachine;      
   
   
   
