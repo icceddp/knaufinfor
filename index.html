@@ -1190,14 +1190,14 @@ var cliche6  = document.getElementById('cliche6').value;
 var visual6  = document.getElementById('visual6').value;  
   
   
-var machining = [{schneiden:1,auditor:auditor,encarregado:encarregado,operador:operador,tpinsp:tpinsp,maquina:maquina,silo:silo,am:am,dsilo:dsilo,dop:dop,ciclo:ciclo,vacuo1:vacuo1,vacuo2:vacuo2,refri1:refri1,refri2:refri2,parte1:parte1}];
-   
-//var inmachine = JSON.parse(window.AppInventor.getWebViewString());  
-//window.AppInventor.setWebViewString(JSON.stringify(machining)); 
+var machining = [{schneiden:2,maquina:maquina}];
+window.AppInventor.setWebViewString(JSON.stringify(machining)); 
+var inmachine = JSON.parse(window.AppInventor.getWebViewString());  
+ 
 //document.getElementById("observacao").value = JSON.stringify(inmachine);
 
 auditor  = inmachine.auditor;
-encarregado  = encarregado;
+encarregado  = inmachine.encarregado;
 operador  = inmachine.operador;
 tpinsp  = inmachine.tpinsp;
 am  = inmachine.am;
@@ -1216,7 +1216,7 @@ parte1  = inmachine.parte1;
   
 //document.getElementById("observacao").value = JSON.stringify(inmachine);      
 
-  
+    
   
 } //machine  
   
