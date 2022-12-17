@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -301,6 +302,7 @@ fill:white;
 </div>  
 <div class="line-four">
 <select id="maquina" onchange="machine()">
+   <option value="-">-</option>
   <option value="01">01</option>
   <option value="01">02</option>
   <option value="03">03</option>
@@ -330,6 +332,7 @@ fill:white;
 </select>
 <input type="number" id="am">  
 <select id="silo" onchange="silodens()">
+    <option value="-">-</option>
   <option value="A1">A1</option>
   <option value="A2">A2</option>
   <option value="A3">A3</option>
@@ -559,6 +562,7 @@ var operador  = document.getElementById('operador').value;
 var tpinsp  = document.getElementById('tpinsp').value;
 var maquina  = document.getElementById('maquina').value;
 var am  = document.getElementById('am').value;
+var silo  = document.getElementById('silo').value;  
 var dsilo  = document.getElementById('dsilo').value;
 var dop  = document.getElementById('dop').value;
 var dft  = document.getElementById('dft').value;  
@@ -654,6 +658,11 @@ if
  alert("Nome do Auditor Não inserido");
 }
 if 
+   (maquina=="-") {
+ alert("Selecione a Máquina");
+}
+  
+if 
    (encarregado=="") {
  alert("Nome do Encarregado Não inserido");
 }
@@ -668,7 +677,12 @@ if
 }  
 else if (am.length<4||am.length>4) {
  alert("Código Incorreto");
-}    
+}
+if 
+   (silo=="-") {
+ alert("Selecione Silo");
+}  
+  
 if 
    (ciclo=="") {
  alert("Tempo de Ciclo Não Inserido");
@@ -1051,8 +1065,8 @@ if
  
 }//reaction5  
 
-var list = [{schneiden:1,auditor:auditor,encarregado:encarregado,operador:operador,tpinsp:tpinsp,maquina:maquina,am:am,dsilo:dsilo,dop:dop,ciclo:ciclo,vacuo1:vacuo1,vacuo2:vacuo2,refri1:refri1,refri2:refri2,parte1:parte1}];
-window.AppInventor.setWebViewString(JSON.stringify(list));     
+var list = [{schneiden:1,auditor:auditor,encarregado:encarregado,operador:operador,tpinsp:tpinsp,maquina:maquina,maquina:silo,silo:am,dsilo:dsilo,dop:dop,ciclo:ciclo,vacuo1:vacuo1,vacuo2:vacuo2,refri1:refri1,refri2:refri2,parte1:parte1}];
+ window.AppInventor.setWebViewString(JSON.stringify(list));     
 
   
 }//Main
