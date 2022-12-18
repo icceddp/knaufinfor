@@ -554,6 +554,9 @@ fill:white;
 
 
 <script>
+
+const inmachine = JSON.parse(window.AppInventor.getWebViewString());  
+  
   
 function validateInspec() {//main  
 
@@ -1193,11 +1196,9 @@ var visual6  = document.getElementById('visual6').value;
   
 var machining = [{schneiden:2,maquina:maquina}];
 window.AppInventor.setWebViewString(JSON.stringify(machining)); 
-//var inmachine = JSON.parse(window.AppInventor.getWebViewString());  
  
-//document.getElementById("observacao").value = JSON.stringify(inmachine);
+document.getElementById("observacao").value = JSON.stringify(inmachine);
   
-inventor()
   
 auditor  = inmachine.auditor;
 encarregado  = inmachine.encarregado;
@@ -1215,17 +1216,10 @@ refri1  = inmachine.refri1;
 refri2  = inmachine.refri2;
 //line3  
 parte1  = inmachine.parte1; 
-  
- 
+   
   
 } //machine  
-  
-function inventor(){
-var inmachine = JSON.parse(window.AppInventor.getWebViewString());  
-document.getElementById("observacao").value = JSON.stringify(inmachine);  
-      
-}
-  
+
 
 //Time
 function myTime() {
