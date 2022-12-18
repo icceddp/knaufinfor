@@ -1194,7 +1194,7 @@ var machining = [{schneiden:2,maquina:maquina}];
 window.AppInventor.setWebViewString(JSON.stringify(machining)); 
 var inmachine = JSON.parse(window.AppInventor.getWebViewString());  
  
-//document.getElementById("observacao").value = JSON.stringify(inmachine);
+document.getElementById("observacao").value = JSON.stringify(inmachine);
 
 auditor  = inmachine.auditor;
 encarregado  = inmachine.encarregado;
@@ -1213,10 +1213,6 @@ refri2  = inmachine.refri2;
 //line3  
 parte1  = inmachine.parte1;  
   
-  
-//document.getElementById("observacao").value = JSON.stringify(inmachine);      
-
-    
   
 } //machine  
   
