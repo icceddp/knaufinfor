@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -304,7 +305,7 @@ fill:white;
 <select id="maquina" onchange="machine()">
    <option value="-">-</option>
   <option value="01">01</option>
-  <option value="01">02</option>
+  <option value="02">02</option>
   <option value="03">03</option>
 <option value="04">04</option>
   <option value="05">05</option>
@@ -1192,10 +1193,12 @@ var visual6  = document.getElementById('visual6').value;
   
 var machining = [{schneiden:2,maquina:maquina}];
 window.AppInventor.setWebViewString(JSON.stringify(machining)); 
-var inmachine = JSON.parse(window.AppInventor.getWebViewString());  
+//var inmachine = JSON.parse(window.AppInventor.getWebViewString());  
  
-document.getElementById("observacao").value = JSON.stringify(inmachine);
-
+//document.getElementById("observacao").value = JSON.stringify(inmachine);
+  
+inventor()
+  
 auditor  = inmachine.auditor;
 encarregado  = inmachine.encarregado;
 operador  = inmachine.operador;
@@ -1211,10 +1214,17 @@ vacuo2  = inmachine.vacuo2;
 refri1  = inmachine.refri1;
 refri2  = inmachine.refri2;
 //line3  
-parte1  = inmachine.parte1;  
+parte1  = inmachine.parte1; 
   
+ 
   
 } //machine  
+  
+function inventor(){
+var inmachine = JSON.parse(window.AppInventor.getWebViewString());  
+document.getElementById("observacao").value = JSON.stringify(inmachine);  
+      
+}
   
 
 //Time
