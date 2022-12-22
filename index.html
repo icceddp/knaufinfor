@@ -552,12 +552,14 @@ fill:white;
 
 <script>
 
-const inmachine = JSON.parse(window.AppInventor.getWebViewString());  
-
+const inmachine = JSON.parse(window.AppInventor.getWebViewString());
+const injetora  = document.getElementById('maquina').selectedIndex;  
+const obsin = document.getElementById('observacao').value;
 function loadinventor(){
 
 alert(JSON.stringify(inmachine));
-  
+injetora = inmachine.maquina;
+obsin = inmachine;  
 };  
   
 function validateInspec() {//main  
