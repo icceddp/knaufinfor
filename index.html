@@ -555,14 +555,106 @@ fill:white;
 const inmachine = JSON.parse(window.AppInventor.getWebViewString());
 const injetora  = document.getElementById('maquina').selectedIndex;  
 const obsin = document.getElementById('observacao').value;
+
 function loadinventor(){
+  
 
-//alert(JSON.stringify(inmachine));
-alert(inmachine.maquina + " Received");
-
-
-document.getElementById('maquina').selectedIndex = inmachine.maquina;  
-obsin = inmachine.am;   
+document.getElementById('auditor').value = inmachine.auditor;
+document.getElementById('encarregado').value = inmachine.encarregado;
+document.getElementById('operador').value = inmachine.operador;
+document.getElementById('tpinsp').selectedIndex = inmachine.tpinsp;
+document.getElementById('maquina').selectedIndex = inmachine.maquina;
+document.getElementById('am').value = inmachine.am;
+document.getElementById('silo').selectedIndex = inmachine.silo;
+document.getElementById('dsilo').value = inmachine.dsilo;
+document.getElementById('dop').value = inmachine.dop;
+document.getElementById('dft').value = inmachine.dft;
+//line2  
+document.getElementById('ciclo').value = inmachine.ciclo;
+document.getElementById('vacuo1').value = inmachine.vacuo1;
+document.getElementById('vacuo2').value = inmachine.vacuo2;
+document.getElementById('refri1').value = inmachine.refri1;
+document.getElementById('refri2').value = inmachine.refri2;
+//line3  
+document.getElementById('parte1').selectedIndex = inmachine.parte1;
+document.getElementById('etiqueta1').value = inmachine.etiqueta1;
+document.getElementById('umidade1').value = inmachine.umidade1;
+document.getElementById('Solda1').value = inmachine.Solda1;
+document.getElementById('pesomin1').value = inmachine.pesomin1
+document.getElementById('pesomax1').value = inmachine.pesomax1;
+document.getElementById('pesoreal1').value = inmachine.pesoreal1;
+document.getElementById('dimmin1').value = inmachine.dimmin1;
+document.getElementById('dimmax1').value = inmachine.dimmax1;
+document.getElementById('dimreal1').value = inmachine.dimreal1;
+document.getElementById('cliche1').selectedIndex = inmachine.cliche1;
+document.getElementById('visual1').selectedIndex = inmachine.visual1;
+//line4 
+document.getElementById('parte2').selectedIndex = inmachine.parte2;
+document.getElementById('etiqueta2').value = inmachine.etiqueta2;
+document.getElementById('umidade2').value = inmachine.umidade2;
+document.getElementById('Solda2').value = inmachine.Solda2;
+document.getElementById('pesomin2').value = inmachine.pesomin2;
+document.getElementById('pesomax2').value = inmachine.pesomax2;
+document.getElementById('pesoreal2').value = inmachine.pesoreal2;
+document.getElementById('dimmin2').value = inmachine.dimmin2;
+document.getElementById('dimmax2').value = inmachine.dimmax2;
+document.getElementById('dimreal2').value = inmachine.dimreal2;
+document.getElementById('cliche2').selectedIndex = inmachine.cliche2;
+document.getElementById('visual2').selectedIndex = inmachine.visual2;
+//line5 
+document.getElementById('parte3').selectedIndex = inmachine.parte3;
+document.getElementById('etiqueta3').value = inmachine.etiqueta3;
+document.getElementById('umidade3').value = inmachine.umidade3;
+document.getElementById('Solda3').value = inmachine.Solda3;
+document.getElementById('pesomin3').value = inmachine.pesomin3;
+document.getElementById('pesomax3').value = inmachine.pesomax3;
+document.getElementById('pesoreal3').value = inmachine.pesoreal3;
+document.getElementById('dimmin3').value = inmachine.dimmin3;
+document.getElementById('dimmax3').value = inmachine.dinmax3;
+document.getElementById('dimreal3').value = inmachine.dimreal3;
+document.getElementById('cliche3').selectedIndex = inmachine.cliche3;
+document.getElementById('visual3').selectedIndex = inmachine.visual3;
+  
+//line6 
+document.getElementById('parte4').selectedIndex = inmachine.parte4;
+document.getElementById('etiqueta4').value = inmachine.etiqueta4;
+document.getElementById('umidade4').value = inmachine.umidade4;
+document.getElementById('Solda4').value = inmachine.Solda4;
+document.getElementById('pesomin4').value = inmachine.pesomin4;
+document.getElementById('pesomax4').value = inmachine.pesomax4;
+document.getElementById('pesoreal4').value = inmachine.pesoreal4;
+document.getElementById('dimmin4').value = inmachine.dimmin4;
+document.getElementById('dimmax4').value = inmachine.dimmax4;
+document.getElementById('dimreal4').value = inmachine.dimreal4;
+document.getElementById('cliche4').selectedIndex = inmachine.cliche4;
+document.getElementById('visual4').selectedIndex = inmachine.visual4;
+//line7 
+document.getElementById('parte5').selectedIndex = inmachine.parte5;
+document.getElementById('etiqueta5').value = inmachine.etiqueta5;
+document.getElementById('umidade5').value = inmachine.umidade5;
+document.getElementById('Solda5').value = inmachine.Solda5;
+document.getElementById('pesomin5').value = inmachine.pesomin5;
+document.getElementById('pesomax5').value = inmachine.pesomax5;
+document.getElementById('pesoreal5').value = inmachine.pesoreal5;
+document.getElementById('dimmin5').value = inmachine.dimmin5;
+document.getElementById('dimmax5').value = inmachine.dimmax5;
+document.getElementById('dimreal5').value = inmachine.dimreal5;
+document.getElementById('cliche5').selectedIndex = inmachine.cliche5;
+document.getElementById('visual5').selectedIndex = inmachine.visual5;
+//line7
+ddocument.getElementById('parte6').selectedIndex = inmachine.parte6;
+document.getElementById('etiqueta6').value = inmachine.etiqueta6;
+document.getElementById('umidade6').value = inmachine.umidade6;
+document.getElementById('Solda6').value = inmachine.Solda6;
+document.getElementById('pesomin6').value = inmachine.pesomin6;
+document.getElementById('pesomax6').value = inmachine.pesomax6;
+document.getElementById('pesoreal6').value = inmachine.pesoreal6;
+document.getElementById('dimmin6').value = inmachine.dimmin6;
+document.getElementById('dimmax6').value = inmachine.dimmax6;
+document.getElementById('dimreal6').value = inmachine.dimreal6;
+document.getElementById('cliche6').selectedIndex = inmachine.cliche6;
+document.getElementById('visual6').selectedIndex = inmachine.visual6; 
+  
 };  
   
 function validateInspec() {//main  
