@@ -559,7 +559,10 @@ function loadinventor(){
 
 //alert(JSON.stringify(inmachine));
 alert(inmachine.maquina + " Received");
-const injetora = inmachine.maquina
+injetora = inmachine.maquina
+document.getElementById("maquina").options.selectedIndex = inmachine.maquina
+injetora = "2"  
+  
 };  
   
 function validateInspec() {//main  
