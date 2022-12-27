@@ -1276,11 +1276,10 @@ alert("Data Record");
 
 //fillsilo  
 function silodens() {
-
-
-//const silo = JSON.parse(window.AppInventor.getWebViewString());
-//{"A1":11,"A2":22,"A3":33}
-
+const silod  = document.getElementById('silo').selectedIndex;
+const siloing = {schneiden:3,silo:silod};
+window.AppInventor.setWebViewString(JSON.stringify(siloing)); 
+alert(siloing.silo);
 
   
 //const siloselect = document.getElementById('silo').value;
@@ -1289,15 +1288,15 @@ function silodens() {
 //document.getElementById('dsilo').value = silo[siloselect];
 //document.getElementById("observacao").value = silo;  
   
-} 
+}//silo
   
 function machine(){  
 const machined  = document.getElementById('maquina').selectedIndex;
 const machining = {schneiden:2,maquina:machined};
- window.AppInventor.setWebViewString(JSON.stringify(machining)); 
-alert(machining.maquina);
+window.AppInventor.setWebViewString(JSON.stringify(machining)); 
+
   
-} //machine  
+} //machine 
 
 
 //Time
