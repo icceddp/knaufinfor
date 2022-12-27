@@ -1276,14 +1276,18 @@ alert("Data Record");
 
 //fillsilo  
 function silodens() {
-const silod  = document.getElementById('silo').selectedIndex;
-const siloing = {schneiden:3,silo:silod};
-window.AppInventor.setWebViewString(JSON.stringify(siloing)); 
+const auditor = document.getElementById('auditor').value;
+const encarregado = document.getElementById('encarregado').value;
+const operador = document.getElementById('operador').value;
+const tpinsp = document.getElementById('tpinsp').selectedIndex;
+const maquina = document.getElementById('maquina').selectedIndex;
+const am = document.getElementById('am').selectedIndex;
+const silo = document.getElementById('silo').selectedIndex;
+const siloing = {schneiden:3,auditor:auditor,encarregado:encarregado,tpinsp:tpinsp,maquina:maquina,operador:operador,am:am,silo:silo};
+//window.AppInventor.setWebViewString(JSON.stringify(siloing)); 
 alert(siloing.silo);
 
-  
-//const siloselect = document.getElementById('silo').value;
-  
+
 //alert(silo[siloselect] +" Selecionado");
 //document.getElementById('dsilo').value = silo[siloselect];
 //document.getElementById("observacao").value = silo;  
@@ -1293,10 +1297,10 @@ alert(siloing.silo);
 function machine(){  
 const machined  = document.getElementById('maquina').selectedIndex;
 const machining = {schneiden:2,maquina:machined};
-window.AppInventor.setWebViewString(JSON.stringify(machining)); 
+//window.AppInventor.setWebViewString(JSON.stringify(machining)); 
 
   
-} //machine 
+} //machine  
 
 
 //Time
