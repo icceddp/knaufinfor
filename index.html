@@ -1292,10 +1292,10 @@ function silodens() {
 } 
   
 function machine(){  
-
-var machining = [{schneiden:2,maquina:maquina}];
-window.AppInventor.setWebViewString(JSON.stringify(machining)); 
- 
+const machined  = document.getElementById('maquina').selectedIndex;
+const machining = {schneiden:2,maquina:machined};
+ window.AppInventor.setWebViewString(JSON.stringify(machining)); 
+alert(machining.maquina);
   
 } //machine  
 
