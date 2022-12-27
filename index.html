@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -752,108 +753,110 @@ visual6.selectedIndex = inmachine.visual6;
 };  
   
 function validateInspec() {//main  
-const auditor = document.getElementById('auditor').value;
-const encarregado = document.getElementById('encarregado').value;
-const operador = document.getElementById('operador').value;
- const tpinsp = document.getElementById('tpinsp').value;
-const maquina = document.getElementById('maquina');
- const am = document.getElementById('am').value;
-const silo = document.getElementById('silo');
-const dsilo = document.getElementById('dsilo').value;
-const dop = document.getElementById('dop').value;
-const dft = document.getElementById('dft').value;
+
+var auditor  = document.getElementById('auditor').value;
+var encarregado  = document.getElementById('encarregado').value;
+var operador  = document.getElementById('operador').value;
+var tpinsp  = document.getElementById('tpinsp').selectedIndex;  
+var maquina  = document.getElementById('maquina').selectedIndex;
+var am  = document.getElementById('am').value;
+var silo  = document.getElementById('silo').selectedIndex;
+var dsilo  = document.getElementById('dsilo').value;
+var dop  = document.getElementById('dop').value;
+var dft  = document.getElementById('dft').value;  
 //line2  
-const ciclo = document.getElementById('ciclo').value;
-const vacuo1 = document.getElementById('vacuo1').value;
-const vacuo2 = document.getElementById('vacuo2').value;
-const refri1 = document.getElementById('refri1').value;
-const refri2 = document.getElementById('refri2').value;
+var ciclo  = document.getElementById('ciclo').value;
+var vacuo1  = document.getElementById('vacuo1').value;
+var vacuo2  = document.getElementById('vacuo2').value;
+var refri1  = document.getElementById('refri1').value;
+var refri2  = document.getElementById('refri2').value;
 //line3  
-const parte1 = document.getElementById('parte1').selectedIndex;
-const etiqueta1 = document.getElementById('etiqueta1').value;
-const umidade1 = document.getElementById('umidade1').value;
-const Solda1 = document.getElementById('Solda1').value;
-const pesomin1 = document.getElementById('pesomin1').value;
-const pesomax1 = document.getElementById('pesomax1').value;
-const pesoreal1 = document.getElementById('pesoreal1').value;
-const dmmin1 = document.getElementById('dimmin1').value;
-const dimmax1 = document.getElementById('dimmax1').value;
-const dimreal1 = document.getElementById('dimreal1').value;
-const cliche1 = document.getElementById('cliche1').selectedIndex;
-const visual1 = document.getElementById('visual1').selectedIndex;
+var parte1  = document.getElementById('parte1').selectedIndex;  
+var etiqueta1  = document.getElementById('etiqueta1').value;
+var umidade1  = document.getElementById('umidade1').value;
+var Solda1  = document.getElementById('Solda1').value;
+var pesomin1  = document.getElementById('pesomin1').value;
+var pesomax1  = document.getElementById('pesomax1').value;
+var pesoreal1  = document.getElementById('pesoreal1').value;
+var dimmin1  = document.getElementById('dimmin1').value;
+var dimmax1  = document.getElementById('dimmax1').value;
+var dimreal1  = document.getElementById('dimreal1').value;
+var cliche1  = document.getElementById('cliche1').selectedIndex;
+var visual1  = document.getElementById('visual1').selectedIndex;
 //line4 
-const parte2 = document.getElementById('parte2').selectedIndex;
-const etiqueta2 = document.getElementById('etiqueta2').value;
-const umidade2 = document.getElementById('umidade2').value;
-const Solda2 = document.getElementById('Solda2').value;
-const pesomin2 = document.getElementById('pesomin2').value;
-const pesomax2 = document.getElementById('pesomax2').value;
-const pesoreal2 = document.getElementById('pesoreal2').value;
-const dmmin2 = document.getElementById('dimmin2').value;
-const dimmax2 = document.getElementById('dimmax2').value;
-const dimreal2 = document.getElementById('dimreal2').value;
-const cliche2 = document.getElementById('cliche2').selectedIndex;
-const visual2 = document.getElementById('visual2').selectedIndex;
+var parte2 = document.getElementById('parte2').selectedIndex; 
+var etiqueta2  = document.getElementById('etiqueta2').value;
+var umidade2  = document.getElementById('umidade2').value;
+var Solda2  = document.getElementById('Solda2').value;
+var pesomin2  = document.getElementById('pesomin2').value;
+var pesomax2  = document.getElementById('pesomax2').value;
+var pesoreal2  = document.getElementById('pesoreal2').value;
+var dimmin2  = document.getElementById('dimmin2').value;
+var dimmax2  = document.getElementById('dimmax2').value;
+var dimreal2  = document.getElementById('dimreal2').value;
+var cliche2  = document.getElementById('cliche2').selectedIndex;
+var visual2  = document.getElementById('visual2').selectedIndex;
 //line5 
-const parte3 = document.getElementById('parte3').selectedIndex;
-const etiqueta3 = document.getElementById('etiqueta3').value;
-const umidade3 = document.getElementById('umidade3').value;
-const Solda3 = document.getElementById('Solda3').value;
-const pesomin3 = document.getElementById('pesomin3').value;
-const pesomax3 = document.getElementById('pesomax3').value;
-const pesoreal3 = document.getElementById('pesoreal3').value;
-const dmmin3 = document.getElementById('dimmin3').value;
-const dimmax3 = document.getElementById('dimmax3').value;
-const dimreal3 = document.getElementById('dimreal3').value;
-const cliche3 = document.getElementById('cliche3').selectedIndex;
-const visual3 = document.getElementById('visual3').selectedIndex;
+var parte3 = document.getElementById('parte3').selectedIndex; 
+var etiqueta3  = document.getElementById('etiqueta3').value;
+var umidade3  = document.getElementById('umidade3').value;
+var Solda3  = document.getElementById('Solda3').value;
+var pesomin3  = document.getElementById('pesomin3').value;
+var pesomax3  = document.getElementById('pesomax3').value;
+var pesoreal3  = document.getElementById('pesoreal3').value;
+var dimmin3  = document.getElementById('dimmin3').value;
+var dimmax3  = document.getElementById('dimmax3').value;
+var dimreal3  = document.getElementById('dimreal3').value;
+var cliche3  = document.getElementById('cliche3').selectedIndex;
+var visual3  = document.getElementById('visual3').selectedIndex;
   
 //line6 
-const parte4 = document.getElementById('parte4').selectedIndex;
-const etiqueta4 = document.getElementById('etiqueta4').value;
-const umidade4 = document.getElementById('umidade4').value;
-const Solda4 = document.getElementById('Solda4').value;
-const pesomin4 = document.getElementById('pesomin4').value;
-const pesomax4 = document.getElementById('pesomax4').value;
-const pesoreal4 = document.getElementById('pesoreal4').value;
-const dmmin4 = document.getElementById('dimmin4').value;
-const dimmax4 = document.getElementById('dimmax4').value;
-const dimreal4 = document.getElementById('dimreal4').value;
-const cliche4 = document.getElementById('cliche4').selectedIndex;
-const visual4 = document.getElementById('visual4').selectedIndex;
+var parte4 = document.getElementById('parte4').selectedIndex; 
+var etiqueta4  = document.getElementById('etiqueta4').value;
+var umidade4  = document.getElementById('umidade4').value;
+var Solda4  = document.getElementById('Solda4').value;
+var pesomin4  = document.getElementById('pesomin4').value;
+var pesomax4  = document.getElementById('pesomax4').value;
+var pesoreal4  = document.getElementById('pesoreal4').value;
+var dimmin4  = document.getElementById('dimmin4').value;
+var dimmax4  = document.getElementById('dimmax4').value;
+var dimreal4  = document.getElementById('dimreal4').value;
+var cliche4  = document.getElementById('cliche4').selectedIndex;
+var visual4  = document.getElementById('visual4').selectedIndex;
 //line7 
-const parte5 = document.getElementById('parte5').selectedIndex;
-const etiqueta5 = document.getElementById('etiqueta5').value;
-const umidade5 = document.getElementById('umidade5').value;
-const Solda5 = document.getElementById('Solda5').value;
-const pesomin5 = document.getElementById('pesomin5').value;
-const pesomax5 = document.getElementById('pesomax5').value;
-const pesoreal5 = document.getElementById('pesoreal5').value;
-const dmmin5 = document.getElementById('dimmin5').value;
-const dimmax5 = document.getElementById('dimmax5').value;
-const dimreal5 = document.getElementById('dimreal5').value;
-const cliche5 = document.getElementById('cliche5').selectedIndex;
-const visual5 = document.getElementById('visual5').selectedIndex;
+var parte5 = document.getElementById('parte5').selectedIndex; 
+var etiqueta5  = document.getElementById('etiqueta5').value;
+var umidade5  = document.getElementById('umidade5').value;
+var Solda5  = document.getElementById('Solda5').value;
+var pesomin5  = document.getElementById('pesomin5').value;
+var pesomax5  = document.getElementById('pesomax5').value;
+var pesoreal5  = document.getElementById('pesoreal5').value;
+var dimmin5  = document.getElementById('dimmin5').value;
+var dimmax5  = document.getElementById('dimmax5').value;
+var dimreal5  = document.getElementById('dimreal5').value;
+var cliche5  = document.getElementById('cliche5').selectedIndex;
+var visual5  = document.getElementById('visual5').selectedIndex;
 //line7
-const parte6 = document.getElementById('parte6').selectedIndex;
-const etiqueta6 = document.getElementById('etiqueta6').value;
-const umidade6 = document.getElementById('umidade6').value;
-const Solda6 = document.getElementById('Solda6').value;
-const pesomin6 = document.getElementById('pesomin6').value;
-const pesomax6 = document.getElementById('pesomax6').value;
-const pesoreal6 = document.getElementById('pesoreal6').value;
-const dmmin6 = document.getElementById('dimmin6').value;
-const dimmax6 = document.getElementById('dimmax6').value;
-const dimreal6 = document.getElementById('dimreal6').value;
-const cliche6 = document.getElementById('cliche6').selectedIndex;
-const visual6 = document.getElementById('visual6').selectedIndex;
+var parte6 = document.getElementById('parte6').selectedIndex; 
+var etiqueta6  = document.getElementById('etiqueta6').value;
+var umidade6  = document.getElementById('umidade6').value;
+var Solda6  = document.getElementById('Solda6').value;
+var pesomin6  = document.getElementById('pesomin6').value;
+var pesomax6  = document.getElementById('pesomax6').value;
+var pesoreal6  = document.getElementById('pesoreal6').value;
+var dimmin6  = document.getElementById('dimmin6').value;
+var dimmax6  = document.getElementById('dimmax6').value;
+var dimreal6  = document.getElementById('dimreal6').value;
+var cliche6  = document.getElementById('cliche6').selectedIndex;
+var visual6  = document.getElementById('visual6').selectedIndex;
+
 
 if 
    (auditor=="") {
  alert("Nome do Auditor Não inserido");
 }
 if 
-   (maquina==0) {
+   (maquina=="-") {
  alert("Selecione a Máquina");
 }
   
@@ -874,7 +877,7 @@ else if (am.length<4||am.length>4) {
  alert("Código Incorreto");
 }
 if 
-   (silo==0) {
+   (silo=="-") {
  alert("Selecione Silo");
 }  
   
@@ -964,12 +967,12 @@ if
 }  
   
 if 
-   (cliche1==1) {
+   (cliche1=="NOK") {
  alert("Impressão do clichê ilegível Parte1.\n Parar produção e solicitar correção");
 }  
   
 if 
-   (visual1==1) {
+   (visual1=="NOK") {
  alert("Requisito cosméstico Não Conforme Parte1.\n Parar produção e solicitar correção");
 }
 
@@ -986,7 +989,7 @@ if
 } 
 
 if 
-   (Solda2"") {
+   (Solda2=="") {
  alert("Valor de Soldabilidade Parte2 Não Inserido");
   
 } else if (Solda2<60) {
@@ -1012,7 +1015,7 @@ if
 }
   
 if 
-   (dimreal2"") {
+   (dimreal2=="") {
  alert("Valor dimensão real Parte2 Não Inserido");
   
 } else if (dimreal2<dimmin2||dimreal2>dimmax2) {
@@ -1020,12 +1023,12 @@ if
 }  
   
 if 
-   (cliche2==1) {
+   (cliche2=="NOK") {
  alert("Impressão do clichê ilegível Parte2.\n Parar produção e solicitar correção");
 }  
   
 if 
-   (visual2==1) {
+   (visual2=="NOK") {
  alert("Requisito cosméstico Não Conforme Parte2.\n Parar produção e solicitar correção");
 }
   
@@ -1059,7 +1062,7 @@ if
    (pesoreal3=="") {
  alert("Valor peso real Parte3 Não Inserido");
   
-} else if (pesoreal3.value<pesomin3.value||pesoreal3.value>pesomax3.value) {
+} else if (pesoreal3<pesomin3||pesoreal3>pesomax3) {
  alert("Peso Fora da Especificação Parte3\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 }
   
@@ -1069,7 +1072,7 @@ if
 }
   
 if 
-   (dimreal3"") {
+   (dimreal3=="") {
  alert("Valor dimensão real Parte3 Não Inserido");
   
 } else if (dimreal3<dimmin3||dimreal3>dimmax3) {
@@ -1077,12 +1080,12 @@ if
 }  
   
 if 
-   (cliche3==1) {
+   (cliche3=="NOK") {
  alert("Impressão do clichê ilegível Parte3.\n Parar produção e solicitar correção");
 }  
   
 if 
-   (visual3==1) {
+   (visual3=="NOK") {
  alert("Requisito cosméstico Não Conforme Parte3.\n Parar produção e solicitar correção");
 }
   
@@ -1116,7 +1119,7 @@ if
    (pesoreal4=="") {
  alert("Valor peso real Parte4 Não Inserido");
   
-} else if (pesoreal4.value<pesomin4.value||pesoreal4.value>pesomax4.value) {
+} else if (pesoreal4<pesomin4||pesoreal4>pesomax4) {
  alert("Peso Fora da Especificação Parte4\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 }
   
@@ -1134,12 +1137,12 @@ if
 }  
   
 if 
-   (cliche4==1) {
+   (cliche4=="NOK") {
  alert("Impressão do clichê ilegível Parte4.\n Parar produção e solicitar correção");
 }  
   
 if 
-   (visual4==1) {
+   (visual4=="NOK") {
  alert("Requisito cosméstico Não Conforme Parte4.\n Parar produção e solicitar correção");
 }
   
@@ -1191,15 +1194,14 @@ if
 }  
   
 if 
-   (cliche5==1) {
+   (cliche5=="NOK") {
  alert("Impressão do clichê ilegível Parte5.\n Parar produção e solicitar correção");
 }  
   
 if 
-   (visual5==1) {
+   (visual5=="NOK") {
  alert("Requisito cosméstico Não Conforme Parte5.\n Parar produção e solicitar correção");
 }
-
   
 }//reaction4  
   
@@ -1210,8 +1212,8 @@ if
    (umidade6=="") {
  alert("Valor de Umidade Parte6 Não Inserido");
   
-} else if (umidade6>6) {
- alert("Índice de Umidade Parte6 Maior Que 6% \n SOLICITAR AJUSTE NA MÁQUINA");
+} else if (umidade6>5) {
+ alert("Índice de Umidade Parte6 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
 } 
 
 if 
@@ -1231,7 +1233,7 @@ if
    (pesoreal6=="") {
  alert("Valor peso real Parte6 Não Inserido");
   
-} else if (pesoreal6<pesomin6||pesoreal6>pesomax6) {
+} else if (pesoreal5<pesomin6||pesoreal6>pesomax5) {
  alert("Peso Fora da Especificação Parte6\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 }
   
@@ -1244,28 +1246,25 @@ if
    (dimreal6=="") {
  alert("Valor dimensão real Parte6 Não Inserido");
   
-} else if (dimreal6.value<dimmin6.value||dimreal6.value>dimmax6.value) {
+} else if (dimreal6<dimmin6||dimreal6>dimmax6) {
  alert("Dimensional Fora da Especificação Parte6\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 }  
   
 if 
-   (cliche6==1) {
+   (cliche6=="NOK") {
  alert("Impressão do clichê ilegível Parte6.\n Parar produção e solicitar correção");
 }  
   
 if 
-   (visual6==1) {
+   (visual6=="NOK") {
  alert("Requisito cosméstico Não Conforme Parte6.\n Parar produção e solicitar correção");
 }
-
-
 
  
 }//reaction5  
 
 var list = [{schneiden:1,auditor:auditor,encarregado:encarregado,operador:operador,tpinsp:tpinsp,maquina:maquina,silo:silo,am:am,dsilo:dsilo,dop:dop,dft:dft,ciclo:ciclo,vacuo1:vacuo1,vacuo2:vacuo2,refri1:refri1,refri2:refri2,parte1:parte1,etiqueta1:etiqueta1,umidade1:umidade1,Solda1:Solda1,pesomin1:pesomin1,pesomax1: pesomax1,pesoreal1:pesoreal1,dimmin1: dimmin1,dimmax1:dimmax1,dimreal1:dimreal1,cliche1:cliche1,visual1:visual1,parte2:parte2,etiqueta2:etiqueta2,umidade2:umidade2,Solda2:Solda2,pesomin2:pesomin2,pesomax2: pesomax2,pesoreal2:pesoreal2,dimmin2:dimmin2,dimmax2:dimmax2,dimreal2:dimreal2,cliche2:cliche2,visual2:visual2,parte3:parte3,etiqueta3: etiqueta3,umidade3:umidade3,Solda3:Solda3,pesomin3:pesomin3,pesomax3:pesomax3,pesoreal3:pesoreal3,dimmin3:dimmin3,dimmax3: dimmax3,dimreal3: dimreal3,cliche3: cliche3,visual3: visual3, parte4: parte4,etiqueta4:etiqueta4,umidade4:umidade4,Solda4:Solda4,pesomin4:pesomin4,pesomax4:pesomax4,pesoreal4:pesoreal4,dimmin4:dimmin4,dimmax4:dimmax4,dimreal4:dimreal4,cliche4:cliche4,visual4:visual4,parte5:parte5,etiqueta5:etiqueta5,umidade5:umidade5,Solda5:Solda5,pesomin5:pesomin5,pesomax5:pesomax5,pesoreal5:pesoreal5,dimmin5:dimmin5,dimmax5:dimmax5,dimreal5:dimreal5,cliche5:cliche5,visual5:visual5,parte6:parte6,etiqueta6:etiqueta6,umidade6:umidade6,Solda6:Solda6,pesomin6:pesomin6,pesomax6:pesomax6,pesoreal6:pesoreal6,dimmin6:dimmin6,dimmax6:dimmax6,dimreal6:dimreal6,cliche6:cliche6,visual6:visual6}];
-window.AppInventor.setWebViewString(JSON.stringify(list));
-
+ window.AppInventor.setWebViewString(JSON.stringify(list));     
 
   
 }//Main
