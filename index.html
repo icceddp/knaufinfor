@@ -1284,7 +1284,7 @@ const maquina = document.getElementById('maquina').selectedIndex;
 const am = document.getElementById('am').selectedIndex;
 const silo = document.getElementById('silo').selectedIndex;
 const siloing = {schneiden:3,auditor:auditor,encarregado:encarregado,tpinsp:tpinsp,maquina:maquina,operador:operador,am:am,silo:silo};
-//window.AppInventor.setWebViewString(JSON.stringify(siloing)); 
+window.AppInventor.setWebViewString(JSON.stringify(siloing)); 
 alert(siloing.silo);
 
 
@@ -1297,7 +1297,7 @@ alert(siloing.silo);
 function machine(){  
 const machined  = document.getElementById('maquina').selectedIndex;
 const machining = {schneiden:2,maquina:machined};
-//window.AppInventor.setWebViewString(JSON.stringify(machining)); 
+window.AppInventor.setWebViewString(JSON.stringify(machining)); 
 
   
 } //machine  
