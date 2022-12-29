@@ -329,7 +329,7 @@ fill:white;
 <option value="25">25</option>
   <option value="26">26</option>   
 </select>
-<input type="number" id="am">  
+<input type="number" id="am" onfocusout="callspec()">  
 <select id="silo" onchange="silodens()">
     <option value="-">-</option>
   <option value="A1">A1</option>
@@ -888,7 +888,7 @@ if
  alert("Nome do Auditor Não inserido");
 }
 if 
-   (maquina=="-") {
+   (maquina==0) {
  alert("Selecione a Máquina");
 }
   
@@ -909,7 +909,7 @@ else if (am.length<4||am.length>4) {
  alert("Código Incorreto");
 }
 if 
-   (silo=="-") {
+   (silo==0) {
  alert("Selecione Silo");
 }  
   
@@ -1333,7 +1333,17 @@ window.AppInventor.setWebViewString(JSON.stringify(machining));
 
   
 } //machine  
+function callspec(){
+const am = document.getElementById('am').value; 
 
+if(am.length==4){
+alert(am.length  + "igual")    
+  
+} 
+
+}//spec
+  
+  
 
 //Time
 function myTime() {
