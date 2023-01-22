@@ -1,11 +1,13 @@
 
 
+
 <!DOCTYPE html>
-<html>
+<html>   
 <head>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta charset="utf-8">  
-<body onload="myTime(),loadinventor()">
+<body onload="myTime()">
 <title>Estrutura Base</title>
 <meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1?>
 </head>
@@ -246,9 +248,113 @@ fill:white;
 
   
 }    
- 
-  
 
+dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  max-width: 90%;
+}   
+
+#clsModal{
+   display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: 35%;
+  width: 120px;
+  height: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background: #fadd00;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 2px 2px 3px #0d498f,
+              -2px -2px 7px #ffffff73;
+}
+
+#clsModal:active {
+  
+  color: #9edaff;
+  box-shadow: inset 2px 2px 7px #0d498f,
+              inset -2px -2px 7px #ffffff73;
+}
+
+#FillField{
+padding: 10px;  
+}  
+  
+  
+#falha{
+  background: #fadd00;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 50px;
+} 
+  
+#clsModal2{
+   display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: 35%;
+  width: 120px;
+  height: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background: #fa0c18;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 2px 2px 3px #0d498f,
+              -2px -2px 7px #ffffff73;
+}
+
+#clsModal2:active {
+  
+  color: #9edaff;
+  box-shadow: inset 2px 2px 7px #0d498f,
+              inset -2px -2px 7px #ffffff73;
+}
+
+#FillField2{
+padding: 10px;  
+}  
+  
+#falha{
+  background: #fa0c18;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 50px;
+}    
+
+#atention{
+  background: #fadd00;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 50px;
+}      
+  
 
 </style>
 
@@ -256,6 +362,19 @@ fill:white;
 <body onload="start(),initAudio();">
 
 <div class="container">
+
+<dialog id="attention">
+<h2 id="atention">ATENÇÃO!</h2>
+<p id="FillField">Mensagem aqui</p>  
+<button id="clsModal" onClick="CloseMod()">Fechar</button> 
+</dialog>
+
+<dialog id="failure">
+<h2 id="falha">NÃO CONFORME!</h2>
+<p id="FillField2">Mensagem aqui</p>  
+<button id="clsModal2" onClick="CloseMod1()">Fechar</button> 
+</dialog>
+  
 <div class="work-area">
 <div class="header">
 <h1>AUDITORIA DE PRODUTO</h1>
@@ -329,7 +448,7 @@ fill:white;
 <option value="25">25</option>
   <option value="26">26</option>   
 </select>
-<input type="number" id="am" onfocusout="callspec()">  
+<input type="number" name="amNo" id="am" onfocusout="callspec()">  
 <select id="silo" onchange="silodens()">
     <option value="-">-</option>
   <option value="A1">A1</option>
@@ -406,7 +525,7 @@ fill:white;
 <label>Clichês</label>
 <label>Visual</label>
 
- <select id="parte1">
+ <select  name="parte1" id="parte1">
   <option value="Direita">Direita</option>
   <option value="Esquerda">Esquerda</option>
   <option value="Frontal">Frontal</option>
@@ -414,12 +533,12 @@ fill:white;
 <input type="text" id="etiqueta1">
 <input type="number" placeholder="Max 5%" id="umidade1">
 <input type="number" placeholder="Mmin 65%" id="Solda1">
-<input type="number" id="pesomin1">
-<input type="number" id="pesomax1">
-<input type="number" id="pesoreal1">
-<input type="number" id="dimmin1">
-<input type="number" id="dimmax1">
-<input type="number" id="dimreal1">  
+<input type="number" name="pesomin1" id="pesomin1">
+<input type="number" name="pesomax1" id="pesomax1">
+<input type="number" name="pesoreal1" id="pesoreal1">
+<input type="number" name="dimmin1" id="dimmin1">
+<input type="number" name="dimmax1" id="dimmax1">
+<input type="number" name="dimreal1" id="dimreal1">  
 <select id="cliche1">
   <option value="OK">OK</option>
   <option value="NOK">NOK</option>
@@ -558,9 +677,9 @@ fill:white;
 <div class="line-nine">
 <label></label>  
 <button type="button" id="send" onclick="validateInspec();datarecord()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 21" height="26" id="Layer_21" viewBox="0 0 26 26" width="26"><title/><polygon points="3 12 8.61 14.992 17 8 9 17.455 9 21 12.164 16.887 18 20 21 3 3 12"/></svg>Send</button>
-<button type="button" id="save"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 52 52" width="26"><path d="M0 0h48v48h-48z" fill="none"/><path d="M34 6h-24c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-24l-8-8zm-10 32c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm6-20h-20v-8h20v8z"/></svg>Save</button>
+<button type="button" id="save" onclick="saving()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 52 52" width="26"><path d="M0 0h48v48h-48z" fill="none"/><path d="M34 6h-24c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-24l-8-8zm-10 32c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm6-20h-20v-8h20v8z"/></svg>Save</button>
 <button type="button" id="clean" onClick="window.location.reload()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" height="24" id="Layer_1" viewBox="0 0 22 22" width="24"><title/><path d="M21.20709,2.79291a.99989.99989,0,0,0-1.41418,0L12.893,9.69275l1.41425,1.41418,6.89984-6.89984A.99989.99989,0,0,0,21.20709,2.79291Z"/><path d="M12.31055,16.13965c-1.51636-1.486-3.06219-3.01465-4.39972-4.57166l-.2193.12073-.00934.00513a6.87365,6.87365,0,0,1-4.88538.65833.65315.65315,0,0,0-.79443.69147A9.82176,9.82176,0,0,0,4.7807,19.17352a12.3232,12.3232,0,0,0,4.178-1.77637,14.79974,14.79974,0,0,1-2.44946,3.19507A12.05327,12.05327,0,0,0,8.696,21.76483a.64246.64246,0,0,0,.24408.04767.65283.65283,0,0,0,.47119-.20074,17.80072,17.80072,0,0,0,3.21582-4.88623l.08655-.188C12.57751,16.40375,12.44806,16.2746,12.31055,16.13965Z"/><path d="M13.36035,15.06885l.04742.04675.422-.844a1.612,1.612,0,0,0-.30194-1.86072l-1.65717-1.65717a1.612,1.612,0,0,0-1.86072-.30194L9.25,10.83173C10.50134,12.261,11.9469,13.68317,13.36035,15.06885Z"/></svg>Clean</button>
-<button type="button" id="home"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 32 32" id="Glyph" height="24px" version="1.1"  width="24px"  viewBox="0 0 38 38" xml:space="preserve"><path d="M30.854,16.548C30.523,17.43,29.703,18,28.764,18H28v11c0,0.552-0.448,1-1,1h-6v-7c0-2.757-2.243-5-5-5  s-5,2.243-5,5v7H5c-0.552,0-1-0.448-1-1V18H3.235c-0.939,0-1.759-0.569-2.09-1.451c-0.331-0.882-0.088-1.852,0.62-2.47L13.444,3.019  c1.434-1.357,3.679-1.357,5.112,0l11.707,11.086C30.941,14.696,31.185,15.666,30.854,16.548z" id="XMLID_219_"/></svg>Home</button> 
+<button type="button" id="home" onclick="showAlert()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 32 32" id="Glyph" height="24px" version="1.1"  width="24px"  viewBox="0 0 38 38" xml:space="preserve"><path d="M30.854,16.548C30.523,17.43,29.703,18,28.764,18H28v11c0,0.552-0.448,1-1,1h-6v-7c0-2.757-2.243-5-5-5  s-5,2.243-5,5v7H5c-0.552,0-1-0.448-1-1V18H3.235c-0.939,0-1.759-0.569-2.09-1.451c-0.331-0.882-0.088-1.852,0.62-2.47L13.444,3.019  c1.434-1.357,3.679-1.357,5.112,0l11.707,11.086C30.941,14.696,31.185,15.666,30.854,16.548z" id="XMLID_219_"/></svg>Home</button> 
 <label></label> 
 <!-- line-nine -->  
   
@@ -582,8 +701,282 @@ fill:white;
 </body>
 
 
+  
 <script>
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAcmYeeU8kMiosdeZPoR21v-_Y3Dc4L9H0",
+  authDomain: "codigos-55b04.firebaseapp.com",
+  databaseURL: "https://codigos-55b04-default-rtdb.firebaseio.com",
+  projectId: "codigos-55b04",
+  storageBucket: "codigos-55b04.appspot.com",
+  messagingSenderId: "484535186638",
+  appId: "1:484535186638:web:a7a5fd7da48871db674c9f"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+//incluir nome do item a ser incluido na database
+var amV, parte1V, pesomax1V, pesomin1V, pesoreal1V, dimmax1V, dimmin1V, dimreal1V, parte2V, pesomax2V, pesomin2V, pesoreal2V, dimmax2V, dimmin2V, dimreal2V, parte3V, pesomax3V, pesomin3V, pesoreal3V, dimmax3V, dimmin3V, dimreal3V, parte4V, pesomax4V, pesomin4V, pesoreal4V, dimmax4V, dimmin4V, dimreal4V, parte5V, pesomax5V, pesomin5V, pesoreal5V, dimmax5V, dimmin5V, dimreal5V, parte6V, pesomax6V, pesomin6V, pesoreal6V, dimmax6V, dimmin6V, dimreal6V;
+
+function readFom() {
+//atribuir o nome ao input
+  amV = document.getElementById("am").value;
+  parte1V =  document.getElementById('parte1').selectedIndex;
+  pesomax1V = document.getElementById("pesomax1").value;
+  pesomin1V = document.getElementById("pesomin1").value;
+  pesoreal1V = document.getElementById("pesoreal1").value;
+  dimmax1V = document.getElementById("dimmax1").value;
+  dimmin1V = document.getElementById("dimmin1").value;
+  dimreal1V = document.getElementById("dimreal1").value;
+  
+  parte2V =  document.getElementById('parte2').selectedIndex;
+  pesomax2V = document.getElementById("pesomax2").value;
+  pesomin2V = document.getElementById("pesomin2").value;
+  pesoreal2V = document.getElementById("pesoreal2").value;
+  dimmax2V = document.getElementById("dimmax2").value;
+  dimmin2V = document.getElementById("dimmin2").value;
+  dimreal2V = document.getElementById("dimreal2").value;
+  
+  parte3V =   document.getElementById('parte3').selectedIndex;
+  pesomax3V = document.getElementById("pesomax3").value;
+  pesomin3V = document.getElementById("pesomin3").value;
+  pesoreal3V = document.getElementById("pesoreal3").value;
+  dimmax3V = document.getElementById("dimmax3").value;
+  dimmin3V = document.getElementById("dimmin3").value;
+  dimreal3V = document.getElementById("dimreal3").value;
+  
+    parte4V =          document.getElementById('parte4').selectedIndex;
+  pesomax4V = document.getElementById("pesomax4").value;
+  pesomin4V = document.getElementById("pesomin4").value;
+  pesoreal4V = document.getElementById("pesoreal4").value;
+  dimmax4V = document.getElementById("dimmax4").value;
+  dimmin4V = document.getElementById("dimmin4").value;
+  dimreal4V = document.getElementById("dimreal4").value;
+  
+  parte5V =          document.getElementById('parte5').selectedIndex;
+  pesomax5V = document.getElementById("pesomax5").value;
+  pesomin5V = document.getElementById("pesomin5").value;
+  pesoreal5V = document.getElementById("pesoreal5").value;
+  dimmax5V = document.getElementById("dimmax5").value;
+  dimmin5V = document.getElementById("dimmin5").value;
+  dimreal5V = document.getElementById("dimreal5").value;
+  
+ parte6V =          document.getElementById('parte6').selectedIndex;
+  pesomax6V = document.getElementById("pesomax6").value;
+  pesomin6V = document.getElementById("pesomin6").value;
+  pesoreal6V = document.getElementById("pesoreal6").value;
+  dimmax6V = document.getElementById("dimmax6").value;
+  dimmin6V = document.getElementById("dimmin6").value;
+  dimreal6V = document.getElementById("dimreal6").value;
+  
+  
+  console.log(amV, parte1V, pesomax1V, pesomin1V, pesoreal1V, dimmax1V, dimmin1V, dimreal1V, parte2V, pesomax2V, pesomin2V, pesoreal2V, dimmax2V, dimmin2V, dimreal2V, parte3V, pesomax3V, pesomin3V, pesoreal3V, dimmax3V, dimmin3V, dimreal3V, parte4V, pesomax4V, pesomin4V, pesoreal4V, dimmax4V, dimmin4V, dimreal4V, parte5V, pesomax5V, pesomin5V, pesoreal5V, dimmax5V, dimmin5V, dimreal5V, parte6V, pesomax6V, pesomin6V, pesoreal6V, dimmax6V, dimmin6V, dimreal6V);
+}
+
+document.getElementById("save").onclick = function () {
+  readFom();
+
+  firebase
+//incluir nome do item a ser lido na database
+
+    .database()
+    .ref("codigo/" + amV)
+    .set({
+      amNo: amV,
+      parte1: parte1V,
+      pesomax1: pesomax1V,
+      pesomin1: pesomin1V,
+      pesoreal1: pesoreal1V,
+      dimmax1: dimmax1V,
+    dimmin1: dimmin1V,
+    dimreal1: dimreal1V,
+    
+    parte2: parte2V,
+      pesomax2: pesomax2V,
+      pesomin2: pesomin2V,
+      pesoreal2: pesoreal2V,
+      dimmax2: dimmax2V,
+    dimmin2: dimmin2V,
+    dimreal2: dimreal2V,
+    
+    parte3: parte3V,
+      pesomax3: pesomax3V,
+      pesomin3: pesomin3V,
+      pesoreal3: pesoreal3V,
+      dimmax3: dimmax3V,
+    dimmin3: dimmin3V,
+    dimreal3: dimreal3V,
+    
+    parte4: parte4V,
+      pesomax4: pesomax4V,
+      pesomin4: pesomin4V,
+      pesoreal4: pesoreal4V,
+      dimmax4: dimmax4V,
+    dimmin4: dimmin4V,
+    dimreal4: dimreal4V,
+    
+    parte5: parte5V,
+      pesomax5: pesomax5V,
+      pesomin5: pesomin5V,
+      pesoreal5: pesoreal5V,
+      dimmax5: dimmax5V,
+    dimmin5: dimmin5V,
+    dimreal5: dimreal5V,
+    
+    parte6: parte6V,
+      pesomax6: pesomax6V,
+      pesomin6: pesomin6V,
+      pesoreal6: pesoreal6V,
+      dimmax6: dimmax6V,
+    dimmin6: dimmin6V,
+    dimreal6: dimreal6V,
+    
+    });
+  
+  alert("Data Inserted");
+   
+  
+};
+
+//document.getElementById("home").onclick = function () {
+  
+function fillSpec(){  
+  
+  readFom();
+
+  firebase
+//incluir nome do input a ser incluido informacao da database    
+
+    .database()
+    .ref("codigo/" + amV)
+    .on("value", function (snap) {
+      document.getElementById("am").value = snap.val().amNo;
+document.getElementById('parte1').selectedIndex = snap.val().parte1;
+      document.getElementById("pesomax1").value = snap.val().pesomax1;
+      document.getElementById("pesomin1").value = snap.val().pesomin1;
+      document.getElementById("pesoreal1").value = snap.val().pesoreal1;
+      document.getElementById("dimmax1").value = snap.val().dimmax1;
+      document.getElementById("dimmin1").value = snap.val().dimmin1;    
+document.getElementById("dimreal1").value = snap.val().dimreal1;
+    
+document.getElementById('parte2').selectedIndex = snap.val().parte2;
+      document.getElementById("pesomax2").value = snap.val().pesomax2;
+      document.getElementById("pesomin2").value = snap.val().pesomin2;
+      document.getElementById("pesoreal2").value = snap.val().pesoreal2;
+      document.getElementById("dimmax2").value = snap.val().dimmax2;
+      document.getElementById("dimmin2").value = snap.val().dimmin2;    
+document.getElementById("dimreal2").value = snap.val().dimreal2;
+    
+document.getElementById('parte3').selectedIndex = snap.val().parte3;
+      document.getElementById("pesomax3").value = snap.val().pesomax3;
+      document.getElementById("pesomin3").value = snap.val().pesomin3;
+      document.getElementById("pesoreal3").value = snap.val().pesoreal3;
+      document.getElementById("dimmax3").value = snap.val().dimmax3;
+      document.getElementById("dimmin3").value = snap.val().dimmin3;    
+document.getElementById("dimreal3").value = snap.val().dimreal3;
+    
+document.getElementById('parte4').selectedIndex = snap.val().parte4;
+      document.getElementById("pesomax4").value = snap.val().pesomax4;
+      document.getElementById("pesomin4").value = snap.val().pesomin4;
+      document.getElementById("pesoreal4").value = snap.val().pesoreal4;
+      document.getElementById("dimmax4").value = snap.val().dimmax4;
+      document.getElementById("dimmin4").value = snap.val().dimmin4;    
+document.getElementById("dimreal4").value = snap.val().dimreal4;    
+
+document.getElementById('parte5').selectedIndex = snap.val().parte5;
+      document.getElementById("pesomax5").value = snap.val().pesomax5;
+      document.getElementById("pesomin5").value = snap.val().pesomin5;
+      document.getElementById("pesoreal5").value = snap.val().pesoreal5;
+      document.getElementById("dimmax5").value = snap.val().dimmax5;
+      document.getElementById("dimmin5").value = snap.val().dimmin5;    
+document.getElementById("dimreal5").value = snap.val().dimreal5;  
+    
+ 
+document.getElementById('parte6').selectedIndex = snap.val().parte6;
+      document.getElementById("pesomax6").value = snap.val().pesomax6;
+      document.getElementById("pesomin6").value = snap.val().pesomin6;
+      document.getElementById("pesoreal6").value = snap.val().pesoreal6;
+      document.getElementById("dimmax6").value = snap.val().dimmax6;
+      document.getElementById("dimmin6").value = snap.val().dimmin6;    
+document.getElementById("dimreal6").value = snap.val().dimreal6;     
+    
+    
+    });
+};
+
+document.getElementById("update").onclick = function () {
+  readFom();
+
+  firebase
+    .database()
+    .ref("codigo/" + amV)
+    .update({
+      //   rollNo: rollV,
+      parte1: parte1V,
+      pesomax1: pesomax1V,
+      pesomin1: pesomin1V,
+      pesoreal1: pesoreal1V,
+      dimmax1: dimmax1V,
+      dimmin1: dimmin1V,
+      dimreal1: dimreal1V,
+    
+      parte2: parte2V,
+      pesomax2: pesomax2V,
+      pesomin2: pesomin2V,
+      pesoreal2: pesoreal2V,
+      dimmax2: dimmax2V,
+      dimmin2: dimmin2V,
+      dimreal2: dimreal2V,
+    
+    });
+  
+  alert("Data Update");
+  
+  
+};
+document.getElementById("delete").onclick = function () {
+  readFom();
+
+  firebase
+    .database()
+    .ref("codigo/" + amV)
+    .remove();
+  alert("Data Deleted");
+  document.getElementById("am").value = "";
+  document.getElementById('parte1').selectedIndex = 0;
+  document.getElementById("pesomax1").value = "";
+  document.getElementById("pesomin1").value = "";
+  document.getElementById("pesoreal1").value = "";
+  document.getElementById("dimmax1").value = "";
+  document.getElementById("dimmin1").value = "";
+ document.getElementById("dimreal1").value = "";  
+  
+ document.getElementById('parte2').selectedIndex = 0;
+  document.getElementById("pesomax2").value = "";
+  document.getElementById("pesomin2").value = "";
+  document.getElementById("pesoreal2").value = "";
+  document.getElementById("dimmax2").value = "";
+  document.getElementById("dimmin2").value = "";
+ document.getElementById("dimreal2").value = "";   
+  
+};
+  
+  
+//Time
+function myTime() {
+const d = new Date();
+month = '' + (d.getMonth() + 1),
+day = '' + d.getDate(),
+year = d.getFullYear();
+if (month.length < 2) month = '0' + month;
+if (day.length < 2) day = '0' + day;  
+document.getElementById("data").innerHTML = day+"/"+month+"/"+year;  
+}    
+  
 const inmachine = JSON.parse(window.AppInventor.getWebViewString());
 const auditor = document.getElementById('auditor');
 const encarregado = document.getElementById('encarregado');
@@ -785,7 +1178,6 @@ observacao.value = inmachine.observacao
 };  
   
 function validateInspec() {//main  
-
 var auditor  = document.getElementById('auditor').value;
 var encarregado  = document.getElementById('encarregado').value;
 var operador  = document.getElementById('operador').value;
@@ -882,118 +1274,151 @@ var dimreal6  = document.getElementById('dimreal6').value;
 var cliche6  = document.getElementById('cliche6').selectedIndex;
 var visual6  = document.getElementById('visual6').selectedIndex;
 var observacao = document.getElementById('observacao').value;  
+var alertaA = document.getElementById('attention'); 
+var fillA = document.getElementById('FillField');
+var btnCloseA = document.getElementById('clsModal');
+var errMsg = "";
+var alertaB = document.getElementById('failure'); 
+var fillB = document.getElementById('FillField2');
+var btnCloseB = document.getElementById('clsModal2');  
+var flrMsg = "";  
 
 if 
    (auditor=="") {
- alert("Nome do Auditor Não inserido");
+ //alert("Nome do Auditor Não inserido");
+ errMsg+="Inserir Nome do Auditor<br>";  
 }
-if 
-   (maquina==0) {
- alert("Selecione a Máquina");
-}
+
   
 if 
    (encarregado=="") {
- alert("Nome do Encarregado Não inserido");
+ //alert("Nome do Encarregado Não inserido");
+ errMsg+="Inserir Nome do Encarregado<br>";    
+
 }
 if 
    (operador=="") {
- alert("Nome do Operador Não inserido");
+ //alert("Nome do Operador Não inserido");
+ errMsg+="Inserir Nome do Operador<br>";      
 } 
+  
+if 
+   (maquina==0) {
+ //alert("Selecione a Máquina");
+  errMsg+="Selecione a Máquina<br>";
+  fillA.innerHTML = errMsg;   
+     
+}  
+  
 
 if 
    (am==""){
-       alert("Inserir Código do Produto");
+ //alert("Inserir Código do Produto");
+  errMsg+="Inserir Código do Produto<br>";        
 }  
 else if (am.length<4||am.length>4) {
- alert("Código Incorreto");
+//alert("Código Incorreto");
+ errMsg+="Código Incorreto<br>";   
 }
 if 
    (silo==0) {
- alert("Selecione Silo");
+ //alert("Selecione Silo");
+ errMsg+="Selecione o Silo<br>";
 }  
   
 if 
    (ciclo=="") {
- alert("Tempo de Ciclo Não Inserido");
+ //alert("Tempo de Ciclo Não Inserido");
+ errMsg+="Inserir Tempo de Ciclo<br>";
 } 
   
 if 
    (dsilo=="") {
- alert("Silo Não Selecionado");
+ //alert("Silo Não Selecionado");
+ errMsg+="Inserir Densidade do Silo<br>"; 
 } 
   
 if 
    (dop=="") {
- alert("Densidade de OP Não Inserida");
+ //alert("Densidade de OP Não Inserida");
+ errMsg+="Inserir Densidade da OP<br>";
 }
 
 if 
    (dft=="") {
- alert("Densidade da Ficha Técnida Não Inserida");
+ //alert("Densidade da Ficha Técnida Não Inserida");
+ errMsg+="Inserir Densidade da Ficha Técnica<br>";
 }   
   
 if 
    (vacuo1==""||vacuo2=="") {
- alert("Valor de Vácuo Não Inserido");
-  
+ //alert("Valor de Vácuo Não Inserido");
+ errMsg+="Inserir Valor do Vácuo<br>";
+     
 } else if (vacuo1<0.5||vacuo2<0.5) {
- alert("Valor de Vácuo Menor Que 0.5Bar REQUISITO NÃO CONFORME SOLICITAR AJUSTE");
+//alert("Valor de Vácuo Menor Que 0.5Bar REQUISITO NÃO CONFORME SOLICITAR AJUSTE");
+flrMsg+="Vácuo Menor Que 0.5Bar\nREQUISITO NÃO CONFORME SOLICITAR AJUSTE<br>";    
 }    
   
   
 if 
    (refri1==""||refri2=="") {
- alert("Valor de Resfriamento Não Inserido");
-  
+//alert("Valor de Resfriamento Não Inserido");
+ errMsg+="Inserir Tempo de Resfriamento<br>";     
 } else if (refri1>5||refri2>5) {
  alert("Valor de Resfriamento Maior Que 5,0 Seg\n REQUISITO NÃO CONFORME");
 }
 
 if 
    (etiqueta1=="") {
- alert("Dados da Etiqueta Parte1 Não Inserido");
-
+ //alert("Dados da Etiqueta Parte1 Não Inserido");
+ errMsg+="Inserir Número da Etiqueta Parte1<br>";    
 }   
 
 if 
    (umidade1=="") {
- alert("Valor de Umidade Parte1 Não Inserido");
-  
+ //alert("Valor de Umidade Parte1 Não Inserido");
+ errMsg+="Inserir Índice de Umidade Parte1<br>";
+     
 } else if (umidade1>5) {
  alert("Índice de Umidade Parte1 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
 } 
 
 if 
    (Solda1=="") {
- alert("Valor de Soldabilidade Parte1 Não Inserido");
-  
+//alert("Valor de Soldabilidade Parte1 Não Inserido");
+ errMsg+="Inserir Índice de Soldabilidade Parte1<br>";    
+           
 } else if (Solda1<60) {
  alert("Soldabilidade Parte1 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 } 
   
 if 
    (pesomin1==""||pesomax1=="") {
- alert("Valores das Especificações dos Pesos Parte1 Não Inserido");
+ //alert("Valores das Especificações dos Pesos Parte1 Não Inserido");
+ errMsg+="Inserir Especificações de Pesos Parte1<br>";         
 }
   
 if 
    (pesoreal1=="") {
- alert("Valor peso real Parte1 Não Inserido");
-  
+//alert("Valor peso real Parte1 Não Inserido");
+ errMsg+="Inserir Peso Real Parte1<br>";    
 } else if (pesoreal1<pesomin1||pesoreal1>pesomax1) {
  alert("Peso Fora da Especificação Parte1\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 }
   
 if 
    (dimmin1==""||dimmax1=="") {
- alert("Valores das Especificações das Dimensões Parte1 Não Inserido");
+//alert("Valores das Especificações das Dimensões Parte1 Não Inserido");
+errMsg+="Inserir Especificações das Dimensões Parte1<br>";     
 }
   
 if 
    (dimreal1=="") {
- alert("Valor dimensão real Parte1 Não Inserido");
-  
+ //alert("Valor dimensão real Parte1 Não Inserido");
+ errMsg+="Inserir Dimensão Real Parte1<br>";
+       
+     
 } else if (dimreal1<dimmin1||dimreal1>dimmax1) {
  alert("Dimensional Fora da Especificação Parte1\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 }  
@@ -1006,15 +1431,16 @@ if
 if 
    (visual1==1) {
  alert("Requisito cosméstico Não Conforme Parte1.\n Parar produção e solicitar correção");
-}
+}//reaction1
 
-
-//reaction1
+  
+  
 if (parte2!=0) {
    
 if 
    (umidade2=="") {
- alert("Valor de Umidade Parte2 Não Inserido");
+ //alert("Valor de Umidade Parte2 Não Inserido");
+  errMsg+="Inserir Índice de Umidade Parte2<br>";
   
 } else if (umidade2>5) {
  alert("Índice de Umidade Parte2 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
@@ -1022,20 +1448,23 @@ if
 
 if 
    (Solda2=="") {
- alert("Valor de Soldabilidade Parte2 Não Inserido");
+ //alert("Valor de Soldabilidade Parte2 Não Inserido");
+  errMsg+="Inserir Índice Soldabilidade Parte2<br>";    
   
 } else if (Solda2<60) {
  alert("Soldabilidade Parte2 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 } 
-  
+ 
 if 
    (pesomin2==""||pesomax2=="") {
- alert("Valores das Especificações dos Pesos Parte2 Não Inserido");
+ //alert("Valores das Especificações dos Pesos Parte2 Não Inserido");
+ errMsg+="Inserir Especificação dos Pesos Parte2<br>";     
 }
   
 if 
    (pesoreal2=="") {
- alert("Valor peso real Parte2 Não Inserido");
+ //alert("Valor peso real Parte2 Não Inserido");
+  errMsg+="Inserir Peso Real Parte2<br>";     
   
 } else if (pesoreal2<pesomin2||pesoreal2>pesomax2) {
  alert("Peso Fora da Especificação Parte2\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1043,12 +1472,15 @@ if
   
 if 
    (dimmin2==""||dimmax2=="") {
- alert("Valores das Especificações das Dimensões Parte2 Não Inserido");
+ //alert("Valores das Especificações das Dimensões Parte2 Não Inserido");
+ errMsg+="Inserir Especificação da Dimensão Parte2<br>";     
 }
   
 if 
    (dimreal2=="") {
- alert("Valor dimensão real Parte2 Não Inserido");
+ //alert("Valor dimensão real Parte2 Não Inserido");
+ errMsg+="Inserir Dimensão Real Parte2<br>";
+
   
 } else if (dimreal2<dimmin2||dimreal2>dimmax2) {
  alert("Dimensional Fora da Especificação Parte2\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1065,13 +1497,16 @@ if
 }
   
 }//reaction1
+  
 
+  
 //reaction2
 if (parte3!=0) {
    
 if 
    (umidade3=="") {
- alert("Valor de Umidade Parte3 Não Inserido");
+ //alert("Valor de Umidade Parte3 Não Inserido");
+  errMsg+="Inserir Índice de Umidade Parte3<br>";    
   
 } else if (umidade3>5) {
  alert("Índice de Umidade Parte3 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
@@ -1079,20 +1514,23 @@ if
 
 if 
    (Solda3=="") {
- alert("Valor de Soldabilidade Parte3 Não Inserido");
-  
+//alert("Valor de Soldabilidade Parte3 Não Inserido");
+ errMsg+="Inserir Sodabilidade Parte3<br>";
+     
 } else if (Solda3<60) {
  alert("Soldabilidade Parte3 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 } 
   
 if 
    (pesomin3==""||pesomax3=="") {
- alert("Valores das Especificações dos Pesos Parte3 Não Inserido");
+//alert("Valores das Especificações dos Pesos Parte3 Não Inserido");
+ errMsg+="Inserir Especificação dos Pesos Parte3<br>";     
 }
   
 if 
    (pesoreal3=="") {
- alert("Valor peso real Parte3 Não Inserido");
+ //alert("Valor peso real Parte3 Não Inserido");
+  errMsg+="Inserir Peso Real Parte3<br>";    
   
 } else if (pesoreal3<pesomin3||pesoreal3>pesomax3) {
  alert("Peso Fora da Especificação Parte3\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1100,12 +1538,14 @@ if
   
 if 
    (dimmin3==""||dimmax3=="") {
- alert("Valores das Especificações das Dimensões Parte3 Não Inserido");
+//alert("Valores das Especificações das Dimensões Parte3 Não Inserido");
+ errMsg+="Inserir Especificação das Dimensões Parte3<br>";     
 }
   
 if 
    (dimreal3=="") {
- alert("Valor dimensão real Parte3 Não Inserido");
+ //alert("Valor dimensão real Parte3 Não Inserido");
+  errMsg+="Inserir Dimensão Real Parte3<br>";    
   
 } else if (dimreal3<dimmin3||dimreal3>dimmax3) {
  alert("Dimensional Fora da Especificação Parte3\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1121,14 +1561,17 @@ if
  alert("Requisito cosméstico Não Conforme Parte3.\n Parar produção e solicitar correção");
 }
   
-}//reaction2  
+}//reaction2
+  
+
 
 //reaction3
 if (parte4!=0) {
    
 if 
    (umidade4=="") {
- alert("Valor de Umidade Parte4 Não Inserido");
+ //alert("Valor de Umidade Parte4 Não Inserido");
+ errMsg+="Inserir Índice de Umidade Parte4<br>";     
   
 } else if (umidade4>5) {
  alert("Índice de Umidade Parte4 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
@@ -1136,33 +1579,38 @@ if
 
 if 
    (Solda4=="") {
- alert("Valor de Soldabilidade Parte4 Não Inserido");
-  
+//alert("Valor de Soldabilidade Parte4 Não Inserido");
+errMsg+="Inserir Soldabilidade Parte4<br>"; 
+     
 } else if (Solda4<60) {
  alert("Soldabilidade Parte4 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 } 
   
 if 
    (pesomin4==""||pesomax4=="") {
- alert("Valores das Especificações dos Pesos Parte4 Não Inserido");
+//alert("Valores das Especificações dos Pesos Parte4 Não Inserido");
+  errMsg+="Inserir Especificação dos Pesos Parte4<br>";      
 }
   
 if 
    (pesoreal4=="") {
- alert("Valor peso real Parte4 Não Inserido");
-  
+ //alert("Valor peso real Parte4 Não Inserido");
+  errMsg+="Inserir Peso Real Parte4<br>"; 
+     
 } else if (pesoreal4<pesomin4||pesoreal4>pesomax4) {
  alert("Peso Fora da Especificação Parte4\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
 }
   
 if 
    (dimmin4==""||dimmax4=="") {
- alert("Valores das Especificações das Dimensões Parte4 Não Inserido");
+//alert("Valores das Especificações das Dimensões Parte4 Não Inserido");
+  errMsg+="Inserir Especificações das Dimensões Parte4<br>";      
 }
   
 if 
    (dimreal4=="") {
- alert("Valor dimensão real Parte4 Não Inserido");
+ //alert("Valor dimensão real Parte4 Não Inserido");
+   errMsg+="Inserir Dimensão Real Parte4<br>";     
   
 } else if (dimreal4<dimmin4||dimreal4>dimmax4) {
  alert("Dimensional Fora da Especificação Parte4\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1179,13 +1627,17 @@ if
 }
   
 }//reaction3
+
+     
+  
   
 //reaction4
 if (parte5!=0) {
    
 if 
    (umidade5=="") {
- alert("Valor de Umidade Parte5 Não Inserido");
+ //alert("Valor de Umidade Parte5 Não Inserido");
+ errMsg+="Inserir Umidade Parte5<br>";       
   
 } else if (umidade5>5) {
  alert("Índice de Umidade Parte5 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
@@ -1193,7 +1645,8 @@ if
 
 if 
    (Solda5=="") {
- alert("Valor de Soldabilidade Parte5 Não Inserido");
+ //alert("Valor de Soldabilidade Parte5 Não Inserido");
+ errMsg+="Inserir Soldabilidade Parte5<br>";      
   
 } else if (Solda5<60) {
  alert("Soldabilidade Parte5 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1201,12 +1654,14 @@ if
   
 if 
    (pesomin5==""||pesomax5=="") {
- alert("Valores das Especificações dos Pesos Parte5 Não Inserido");
+ //alert("Valores das Especificações dos Pesos Parte5 Não Inserido");
+errMsg+="Inserir Especificações dos Pesos Parte5<br>";     
 }
   
 if 
    (pesoreal5=="") {
- alert("Valor peso real Parte5 Não Inserido");
+//alert("Valor peso real Parte5 Não Inserido");
+errMsg+="Inserir Peso Real Parte5<br>";     
   
 } else if (pesoreal5<pesomin5||pesoreal5>pesomax5) {
  alert("Peso Fora da Especificação Parte5\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1214,12 +1669,14 @@ if
   
 if 
    (dimmin5==""||dimmax5=="") {
- alert("Valores das Especificações das Dimensões Parte5 Não Inserido");
+//alert("Valores das Especificações das Dimensões Parte5 Não Inserido");
+errMsg+="Inserir Especificação das Dimensões Parte5<br>";     
 }
   
 if 
    (dimreal5=="") {
- alert("Valor dimensão real Parte5 Não Inserido");
+//alert("Valor dimensão real Parte5 Não Inserido");
+errMsg+="Inserir Dimensão Real Parte5<br>";     
   
 } else if (dimreal5<dimmin5||dimreal5>dimmax5) {
  alert("Dimensional Fora da Especificação Parte5\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1237,20 +1694,24 @@ if
   
 }//reaction4  
   
+
+  
 //reaction5
 if (parte6!=0) {
    
 if 
    (umidade6=="") {
- alert("Valor de Umidade Parte6 Não Inserido");
-  
+//alert("Valor de Umidade Parte6 Não Inserido");
+errMsg+="Inserir Umidade Parte6<br>";  
+     
 } else if (umidade6>5) {
  alert("Índice de Umidade Parte6 Maior Que 5% \n SOLICITAR AJUSTE NA MÁQUINA");
 } 
 
 if 
    (Solda6=="") {
- alert("Valor de Soldabilidade Parte6 Não Inserido");
+//alert("Valor de Soldabilidade Parte6 Não Inserido");
+errMsg+="Inserir Soldabilidade Parte6<br>";       
   
 } else if (Solda6<60) {
  alert("Soldabilidade Parte6 menor 60% \n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1258,12 +1719,14 @@ if
   
 if 
    (pesomin6==""||pesomax6=="") {
- alert("Valores das Especificações dos Pesos Parte6 Não Inserido");
+//alert("Valores das Especificações dos Pesos Parte6 Não Inserido");
+errMsg+="Inserir Especificação dos Pesos Parte6<br>";       
 }
   
 if 
    (pesoreal6=="") {
- alert("Valor peso real Parte6 Não Inserido");
+ //alert("Valor peso real Parte6 Não Inserido");
+ errMsg+="Inserir Peso Real Parte6<br>";      
   
 } else if (pesoreal5<pesomin6||pesoreal6>pesomax5) {
  alert("Peso Fora da Especificação Parte6\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1271,12 +1734,14 @@ if
   
 if 
    (dimmin6==""||dimmax6=="") {
- alert("Valores das Especificações das Dimensões Parte6 Não Inserido");
+//alert("Valores das Especificações das Dimensões Parte6 Não Inserido");
+errMsg+="Inserir Especificações das Dimensões Parte6<br>";       
 }
   
 if 
    (dimreal6=="") {
- alert("Valor dimensão real Parte6 Não Inserido");
+//alert("Valor dimensão real Parte6 Não Inserido");
+errMsg+="Inserir Dimensão Real Parte6<br>";       
   
 } else if (dimreal6<dimmin6||dimreal6>dimmax6) {
  alert("Dimensional Fora da Especificação Parte6\n PARAR PROCESSO, SOLICITAR AJUSTE NA MÁQUINA");
@@ -1289,15 +1754,25 @@ if
   
 if 
    (visual6==1) {
- alert("Requisito cosméstico Não Conforme Parte6.\n Parar produção e solicitar correção");
+ alert("Requisito cosméstico Não Conforme Parte6.\n Parar produção e solicitar correção");      
 }
-
+    
  
-}//reaction5  
+}//reaction5
+  
+if (errMsg!="") { 
+fillA.innerHTML = errMsg;
+alertaA.showModal(); 
+}  
+
+if (flrMsg!="") { 
+fillB.innerHTML = flrMsg;
+alertaB.showModal(); 
+}    
 
 var list = [{schneiden:1,auditor:auditor,encarregado:encarregado,operador:operador,tpinsp:tpinsp,maquina:maquina,silo:silo,am:am,dsilo:dsilo,dop:dop,dft:dft,ciclo:ciclo,vacuo1:vacuo1,vacuo2:vacuo2,refri1:refri1,refri2:refri2,parte1:parte1,etiqueta1:etiqueta1,umidade1:umidade1,Solda1:Solda1,pesomin1:pesomin1,pesomax1: pesomax1,pesoreal1:pesoreal1,dimmin1: dimmin1,dimmax1:dimmax1,dimreal1:dimreal1,cliche1:cliche1,visual1:visual1,parte2:parte2,etiqueta2:etiqueta2,umidade2:umidade2,Solda2:Solda2,pesomin2:pesomin2,pesomax2: pesomax2,pesoreal2:pesoreal2,dimmin2:dimmin2,dimmax2:dimmax2,dimreal2:dimreal2,cliche2:cliche2,visual2:visual2,parte3:parte3,etiqueta3: etiqueta3,umidade3:umidade3,Solda3:Solda3,pesomin3:pesomin3,pesomax3:pesomax3,pesoreal3:pesoreal3,dimmin3:dimmin3,dimmax3: dimmax3,dimreal3: dimreal3,cliche3: cliche3,visual3: visual3, parte4: parte4,etiqueta4:etiqueta4,umidade4:umidade4,Solda4:Solda4,pesomin4:pesomin4,pesomax4:pesomax4,pesoreal4:pesoreal4,dimmin4:dimmin4,dimmax4:dimmax4,dimreal4:dimreal4,cliche4:cliche4,visual4:visual4,parte5:parte5,etiqueta5:etiqueta5,umidade5:umidade5,Solda5:Solda5,pesomin5:pesomin5,pesomax5:pesomax5,pesoreal5:pesoreal5,dimmin5:dimmin5,dimmax5:dimmax5,dimreal5:dimreal5,cliche5:cliche5,visual5:visual5,parte6:parte6,etiqueta6:etiqueta6,umidade6:umidade6,Solda6:Solda6,pesomin6:pesomin6,pesomax6:pesomax6,pesoreal6:pesoreal6,dimmin6:dimmin6,dimmax6:dimmax6,dimreal6:dimreal6,cliche6:cliche6,visual6:visual6,observacao:observacao}];
  window.AppInventor.setWebViewString(JSON.stringify(list));     
-
+   
   
 }//Main
  
@@ -1338,27 +1813,26 @@ const am = document.getElementById('am').value;
 
 if(am.length==4){
 alert(am.length  + "igual")    
+fillSpec()
   
 } 
 
 }//spec
+    
+function CloseMod(){
+var closeM = document.getElementById('attention'); 
+closeM.close()
   
+}//Modal  
+
+function CloseMod1(){
+var closeMf = document.getElementById('failure'); 
+closeMf.close()
+  
+}//Modal   
   
 
-//Time
-function myTime() {
-const d = new Date();
-month = '' + (d.getMonth() + 1),
-day = '' + d.getDate(),
-year = d.getFullYear();
-if (month.length < 2) month = '0' + month;
-if (day.length < 2) day = '0' + day;  
-document.getElementById("data").innerHTML = day+"/"+month+"/"+year;  
-}    
-
-
-
-
+  
 </script>
 
 </html>  
