@@ -1981,9 +1981,9 @@ fillapp()
   
  function fillapp(){
    
- var inmachine = window.AppInventor.getWebViewString();
-//JSON.parse(window.AppInventor.getWebViewString());  
-document.getElementById('observacao').value = inmachine  
+ var inmachine = 
+JSON.parse(window.AppInventor.getWebViewString());  
+document.getElementById('observacao').value = inmachine.maquina;  
    
    
    
