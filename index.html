@@ -1969,7 +1969,20 @@ function datarecord() {
 alert("Data Record");  
 } 
 
-//Appinventor send data 
+//Appinventor send data
+  
+function machine(){
+june()  
+var list = {schneiden:2,auditor:auditor,encarregado:encarregado,operador:operador,tpinsp:tpinsp,maquina:maquina,am:am,silo:silo,dsilo:dsilo,dop:dop,dft:dft,ciclo:ciclo,vacuo1:vacuo1,vacuo2:vacuo2,refri1:refri1,refri2:refri2,parte1:parte1,etiqueta:etiqueta1,umidade1:umidade1,Solda1:Solda1,pesomin1:pesomin1,pesomax1:pesomax1,pesoreal1:pesoreal1,compomin1:compmin1,compmax1:compmax1,compreal1:compreal1,largmin1:largmin1,largmax1:largmax1,largreal1:largreal1,altmin1:altmin1,altmax1:altmax1,altreal1:altreal1,cliche1:cliche1,visual1:visual1};
+window.AppInventor.setWebViewString(JSON.stringify(list));
+const inmachine = JSON.parse(window.AppInventor.getWebViewString());  
+observacao = inmachine.maquina;  
+
+  
+} //machine   
+  
+  
+  
 
     
 function CloseMod(){
