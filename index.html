@@ -1979,12 +1979,26 @@ fillapp()
   
 } //machine   
   
- function fillapp(){
+function fillapp(){
    
- var inmachine = 
+var inmachine = 
 JSON.parse(window.AppInventor.getWebViewString());
+document.getElementById('maquina').selectedIndex = inmachine.maquina;
+document.getElementById('parte1').selectedIndex = inmachine.parte1;
+document.getElementById("pesomax1").value = inmachine.pesomax1;
+document.getElementById("pesomin1").value = inmachine.pesomin1;
+document.getElementById("pesorea1").value = inmachine.pesoreal1;
+document.getElementById("compmin1").value = inmachine.compmin1;
+document.getElementById("compmax1").value = inmachine.compmax1;
+document.getElementById("compreal1").value = inmachine.compreal1;
+document.getElementById("largmin1").value = inmachine.largmin1;
+document.getElementById("largmax1").value = inmachine.largmax1;
+document.getElementById("largreal1").value = inmachine.larreal1;
+document.getElementById("altmin1").value = inmachine.altmin1;
+document.getElementById("altmax1").value = inmachine.altmax1;
+document.getElementById("altreal1").value = inmachine.altreal1;
 document.getElementById('observacao').value = inmachine.observacao;
-auditor.value = inmachine.auditor;   
+auditor.value = inmachine.auditor;
    
  } 
   
