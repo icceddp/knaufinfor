@@ -734,7 +734,7 @@ padding: 10px;
 <button type="button" id="send" onclick="validateInspec();datarecord()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 21" height="26" id="Layer_21" viewBox="0 0 26 26" width="26"><title/><polygon points="3 12 8.61 14.992 17 8 9 17.455 9 21 12.164 16.887 18 20 21 3 3 12"/></svg>Send</button>
 <button type="button" id="save" onclick="saving()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 52 52" width="26"><path d="M0 0h48v48h-48z" fill="none"/><path d="M34 6h-24c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-24l-8-8zm-10 32c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm6-20h-20v-8h20v8z"/></svg>Save</button>
 <button type="button" id="clean" onClick="window.location.reload()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" height="24" id="Layer_1" viewBox="0 0 22 22" width="24"><title/><path d="M21.20709,2.79291a.99989.99989,0,0,0-1.41418,0L12.893,9.69275l1.41425,1.41418,6.89984-6.89984A.99989.99989,0,0,0,21.20709,2.79291Z"/><path d="M12.31055,16.13965c-1.51636-1.486-3.06219-3.01465-4.39972-4.57166l-.2193.12073-.00934.00513a6.87365,6.87365,0,0,1-4.88538.65833.65315.65315,0,0,0-.79443.69147A9.82176,9.82176,0,0,0,4.7807,19.17352a12.3232,12.3232,0,0,0,4.178-1.77637,14.79974,14.79974,0,0,1-2.44946,3.19507A12.05327,12.05327,0,0,0,8.696,21.76483a.64246.64246,0,0,0,.24408.04767.65283.65283,0,0,0,.47119-.20074,17.80072,17.80072,0,0,0,3.21582-4.88623l.08655-.188C12.57751,16.40375,12.44806,16.2746,12.31055,16.13965Z"/><path d="M13.36035,15.06885l.04742.04675.422-.844a1.612,1.612,0,0,0-.30194-1.86072l-1.65717-1.65717a1.612,1.612,0,0,0-1.86072-.30194L9.25,10.83173C10.50134,12.261,11.9469,13.68317,13.36035,15.06885Z"/></svg>Clean</button>
-<button type="button" id="home" onclick="fillSpec()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 32 32" id="Glyph" height="24px" version="1.1"  width="24px"  viewBox="0 0 38 38" xml:space="preserve"><path d="M30.854,16.548C30.523,17.43,29.703,18,28.764,18H28v11c0,0.552-0.448,1-1,1h-6v-7c0-2.757-2.243-5-5-5  s-5,2.243-5,5v7H5c-0.552,0-1-0.448-1-1V18H3.235c-0.939,0-1.759-0.569-2.09-1.451c-0.331-0.882-0.088-1.852,0.62-2.47L13.444,3.019  c1.434-1.357,3.679-1.357,5.112,0l11.707,11.086C30.941,14.696,31.185,15.666,30.854,16.548z" id="XMLID_219_"/></svg>Home</button> 
+<button type="button" id="home" onclick="apphome()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 32 32" id="Glyph" height="24px" version="1.1"  width="24px"  viewBox="0 0 38 38" xml:space="preserve"><path d="M30.854,16.548C30.523,17.43,29.703,18,28.764,18H28v11c0,0.552-0.448,1-1,1h-6v-7c0-2.757-2.243-5-5-5  s-5,2.243-5,5v7H5c-0.552,0-1-0.448-1-1V18H3.235c-0.939,0-1.759-0.569-2.09-1.451c-0.331-0.882-0.088-1.852,0.62-2.47L13.444,3.019  c1.434-1.357,3.679-1.357,5.112,0l11.707,11.086C30.941,14.696,31.185,15.666,30.854,16.548z" id="XMLID_219_"/></svg>Home</button> 
 <label></label> 
 <!-- line-nine -->  
   
@@ -2118,7 +2118,12 @@ fillapp()
    
  }//silo 
   
+//backhome  
+function apphome(){
+var list = {schneiden:4};  
+window.AppInventor.setWebViewString(JSON.stringify(list)); 
   
+}   
 
     
 function CloseMod(){
