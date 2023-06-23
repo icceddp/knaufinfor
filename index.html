@@ -10,7 +10,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.98, user-scalable=no">
 <meta charset="utf-8">  
-<body onload="myTime(),fillapp()">
+<body onload="myTime()">
 <title>Estrutura Base</title>
 <meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1?>
 </head>
@@ -2124,13 +2124,13 @@ window.AppInventor.setWebViewString(JSON.stringify(list));
 function CloseMod(){
 var closeM = document.getElementById('attention'); 
 closeM.close()
-  
+fillapp()  
 }//Modal  
 
 function CloseMod1(){
 var closeMf = document.getElementById('failure'); 
 closeMf.close()
-  
+fillapp()  
 }//Modal         
 
 </script>
