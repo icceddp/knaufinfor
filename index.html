@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>   
 <head>
@@ -384,7 +378,8 @@ padding: 10px;
 <h1>AUDITORIA DE PRODUTO</h1>
 <!-- header -->  
 </div>  
-<div class="records">
+<div class="records" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSehXo9KK50L4_LkRPwDi7HWCUEX2mQYw8HZQ3UK0xc4SFDEAA/formResponse" target="_self" method="POST">
+  
 <div class="line-one">
 <label>Data</label>
 <label>Turno</label>
@@ -401,16 +396,16 @@ padding: 10px;
   <option value="2o">2o.</option>
   <option value="3o">3o.</option>
 </select>
-<input type="text" id="auditor" >
-<input type="text" id="encarregado" >
-<input type="text" id="operador" >
+<input type="text" id="auditor" name = "entry.421791642" >
+<input type="text" id="encarregado" name = "entry.51982176" >
+<input type="text" id="operador" name = "entry.1587414994" >
 <select id="tpinsp">
-  <option value="setup">Set-Up</option>
-  <option value="processo">Processo</option>
-  <option value="semplan">Sem Plano</option>
-</select>  
+  <option value="Setup">Set-Up</option>
+  <option value="Processo">Processo</option>
+  <option value="Sem Plano">Sem Plano</option>
+</select> 
   
-<!-- line-two -->  
+<!-- line-two --> 
 </div> 
   
 <div class="line-three">
@@ -425,34 +420,36 @@ padding: 10px;
 <div class="line-four">
 <select id="maquina" onchange="machine()">
    <option value="-">-</option>
-  <option value="01">01</option>
-  <option value="02">02</option>
-  <option value="03">03</option>
-<option value="04">04</option>
-  <option value="05">05</option>
-  <option value="06">06</option>  
-  <option value="07">07</option>
-  <option value="08">08</option>
-  <option value="09">09</option>
-<option value="10">10</option>
-  <option value="11">11</option>
-  <option value="12">12</option>  
-<option value="13">13</option>
-  <option value="14">14</option>
-  <option value="15">15</option>
-<option value="16">16</option>
-  <option value="17">17</option>
-  <option value="18">18</option>  
-  <option value="19">19</option>
-  <option value="20">20</option>
-  <option value="21">21</option>
-<option value="22">22</option>
-  <option value="23">23</option>
-  <option value="24">24</option> 
-<option value="25">25</option>
-  <option value="26">26</option>   
+  <option value="P01">P01</option>
+  <option value="P02">P02</option>
+  <option value="P03">P03</option>
+<option value="P04">P04</option>
+  <option value="P05">P05</option>
+  <option value="P06">P06</option>  
+  <option value="P07">P07</option>
+  <option value="P08">P08</option>
+  <option value="P09">P09</option>
+<option value="P10">P10</option>
+  <option value="P11">P11</option>
+  <option value="P12">P12</option>  
+<option value="P13">P13</option>
+  <option value="P14">P14</option>
+  <option value="P15">P15</option>
+<option value="P16">P16</option>
+  <option value="P17">P17</option>
+  <option value="P18">P18</option>  
+  <option value="P19">P19</option>
+  <option value="P20">P20</option>
+  <option value="P21">P21</option>
+<option value="P22">P22</option>
+  <option value="P23">P23</option>
+  <option value="P24">P24</option> 
+<option value="P25">P25</option>
+  <option value="P26">P26</option>   
 </select>
-<input type="number" name="amNo" id="am" onfocusout="callspec()">  
+<input oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+type = "number"
+maxlength = "4" name="amNo" id="am" onfocusout="callspec()">   
 <select id="silo" onchange="silodens()">
     <option value="-">-</option>
   <option value="A1">A1</option>
@@ -490,7 +487,7 @@ padding: 10px;
   <option value="G8">G8</option>
   
 </select>  
-<input type="number" id="dsilo">
+<input type="number" id="dsilo" name = "entry.1296555413">
 <input type="number" id="dop">
 <input type="number" id="dft">  
   
@@ -536,9 +533,33 @@ padding: 10px;
 <label>Visual</label>
 
  <select  name="parte1" id="parte1">
-  <option value="Direita">Direita</option>
-  <option value="Esquerda">Esquerda</option>
-  <option value="Frontal">Frontal</option>
+<option value="Direita">Direita</option>
+<option value="Esquerda">Esquerda</option>
+<option value="Inferior">Inferior</option>
+<option value="Superior">Superior</option>
+<option value="Inferior Esq.">Inferior Esq.</option>
+<option value="Superior Esq.">Superior Esq.</option>
+<option value="Inferior Dir.">Inferior Dir.</option>
+<option value="Superior Dir.">Superior Dir.</option>
+<option value="Base">Base</option>
+<option value="Botton">Botton</option>
+<option value="Left">Left</option>
+<option value="Right">Right</option>
+<option value="Top">Top</option>
+<option value="Upper">Upper</option>
+<option value="Upper Center">Upper Center</option>
+<option value="Lower Center">Lower Center</option>
+<option value="Side">Side</option>
+<option value="Pad">Pad</option>
+<option value="Tampo">Tampo</option>
+<option value="Cesto">Cesto</option>
+<option value="Central">Central</option>
+<option value="Traseiro">Traseiro</option>
+<option value="Lateral">Lateral</option>
+<option value="Woof">Woof</option>
+<option value="Rear">Rear</option>
+<option value="Front">Front</option>
+<option value="Lajota">Lajota</option>
 </select>
 <input type="text" id="etiqueta1">
 <input type="number" placeholder="Max 5%" id="umidade1">
@@ -567,9 +588,33 @@ padding: 10px;
 
  <select  name="parte2" id="parte2">
 <option value="NA">NA</option>
-  <option value="Direita">Direita</option>
-  <option value="Esquerda">Esquerda</option>
-  <option value="Frontal">Frontal</option>
+<option value="Direita">Direita</option>
+<option value="Esquerda">Esquerda</option>
+<option value="Inferior">Inferior</option>
+<option value="Superior">Superior</option>
+<option value="Inferior Esq.">Inferior Esq.</option>
+<option value="Superior Esq.">Superior Esq.</option>
+<option value="Inferior Dir.">Inferior Dir.</option>
+<option value="Superior Dir.">Superior Dir.</option>
+<option value="Base">Base</option>
+<option value="Botton">Botton</option>
+<option value="Left">Left</option>
+<option value="Right">Right</option>
+<option value="Top">Top</option>
+<option value="Upper">Upper</option>
+<option value="Upper Center">Upper Center</option>
+<option value="Lower Center">Lower Center</option>
+<option value="Side">Side</option>
+<option value="Pad">Pad</option>
+<option value="Tampo">Tampo</option>
+<option value="Cesto">Cesto</option>
+<option value="Central">Central</option>
+<option value="Traseiro">Traseiro</option>
+<option value="Lateral">Lateral</option>
+<option value="Woof">Woof</option>
+<option value="Rear">Rear</option>
+<option value="Front">Front</option>
+<option value="Lajota">Lajota</option>
 </select>
 <input type="text" id="etiqueta2">
 <input type="number" placeholder="Max 5%" id="umidade2">
@@ -598,9 +643,33 @@ padding: 10px;
 
  <select  name="parte3" id="parte3">
 <option value="NA">NA</option>
-  <option value="Direita">Direita</option>
-  <option value="Esquerda">Esquerda</option>
-  <option value="Frontal">Frontal</option>
+<option value="Direita">Direita</option>
+<option value="Esquerda">Esquerda</option>
+<option value="Inferior">Inferior</option>
+<option value="Superior">Superior</option>
+<option value="Inferior Esq.">Inferior Esq.</option>
+<option value="Superior Esq.">Superior Esq.</option>
+<option value="Inferior Dir.">Inferior Dir.</option>
+<option value="Superior Dir.">Superior Dir.</option>
+<option value="Base">Base</option>
+<option value="Botton">Botton</option>
+<option value="Left">Left</option>
+<option value="Right">Right</option>
+<option value="Top">Top</option>
+<option value="Upper">Upper</option>
+<option value="Upper Center">Upper Center</option>
+<option value="Lower Center">Lower Center</option>
+<option value="Side">Side</option>
+<option value="Pad">Pad</option>
+<option value="Tampo">Tampo</option>
+<option value="Cesto">Cesto</option>
+<option value="Central">Central</option>
+<option value="Traseiro">Traseiro</option>
+<option value="Lateral">Lateral</option>
+<option value="Woof">Woof</option>
+<option value="Rear">Rear</option>
+<option value="Front">Front</option>
+<option value="Lajota">Lajota</option>
 </select>
 <input type="text" id="etiqueta3">
 <input type="number" placeholder="Max 5%" id="umidade3">
@@ -630,9 +699,33 @@ padding: 10px;
 
   <select  name="parte4" id="parte4">
 <option value="NA">NA</option>
-  <option value="Direita">Direita</option>
-  <option value="Esquerda">Esquerda</option>
-  <option value="Frontal">Frontal</option>
+<option value="Direita">Direita</option>
+<option value="Esquerda">Esquerda</option>
+<option value="Inferior">Inferior</option>
+<option value="Superior">Superior</option>
+<option value="Inferior Esq.">Inferior Esq.</option>
+<option value="Superior Esq.">Superior Esq.</option>
+<option value="Inferior Dir.">Inferior Dir.</option>
+<option value="Superior Dir.">Superior Dir.</option>
+<option value="Base">Base</option>
+<option value="Botton">Botton</option>
+<option value="Left">Left</option>
+<option value="Right">Right</option>
+<option value="Top">Top</option>
+<option value="Upper">Upper</option>
+<option value="Upper Center">Upper Center</option>
+<option value="Lower Center">Lower Center</option>
+<option value="Side">Side</option>
+<option value="Pad">Pad</option>
+<option value="Tampo">Tampo</option>
+<option value="Cesto">Cesto</option>
+<option value="Central">Central</option>
+<option value="Traseiro">Traseiro</option>
+<option value="Lateral">Lateral</option>
+<option value="Woof">Woof</option>
+<option value="Rear">Rear</option>
+<option value="Front">Front</option>
+<option value="Lajota">Lajota</option>
 </select>
 <input type="text" id="etiqueta4">
 <input type="number" placeholder="Max 5%" id="umidade4">
@@ -659,11 +752,35 @@ padding: 10px;
   <option value="NOK">NOK</option>
   </select>
  
- <select  name="parte5" id="parte5">
+<select  name="parte5" id="parte5">
 <option value="NA">NA</option>
-  <option value="Direita">Direita</option>
-  <option value="Esquerda">Esquerda</option>
-  <option value="Frontal">Frontal</option>
+<option value="Direita">Direita</option>
+<option value="Esquerda">Esquerda</option>
+<option value="Inferior">Inferior</option>
+<option value="Superior">Superior</option>
+<option value="Inferior Esq.">Inferior Esq.</option>
+<option value="Superior Esq.">Superior Esq.</option>
+<option value="Inferior Dir.">Inferior Dir.</option>
+<option value="Superior Dir.">Superior Dir.</option>
+<option value="Base">Base</option>
+<option value="Botton">Botton</option>
+<option value="Left">Left</option>
+<option value="Right">Right</option>
+<option value="Top">Top</option>
+<option value="Upper">Upper</option>
+<option value="Upper Center">Upper Center</option>
+<option value="Lower Center">Lower Center</option>
+<option value="Side">Side</option>
+<option value="Pad">Pad</option>
+<option value="Tampo">Tampo</option>
+<option value="Cesto">Cesto</option>
+<option value="Central">Central</option>
+<option value="Traseiro">Traseiro</option>
+<option value="Lateral">Lateral</option>
+<option value="Woof">Woof</option>
+<option value="Rear">Rear</option>
+<option value="Front">Front</option>
+<option value="Lajota">Lajota</option>
 </select>
 <input type="text" id="etiqueta5">
 <input type="number" placeholder="Max 5%" id="umidade5">
@@ -692,9 +809,33 @@ padding: 10px;
 
  <select  name="parte6" id="parte6">
 <option value="NA">NA</option>
-  <option value="Direita">Direita</option>
-  <option value="Esquerda">Esquerda</option>
-  <option value="Frontal">Frontal</option>
+<option value="Direita">Direita</option>
+<option value="Esquerda">Esquerda</option>
+<option value="Inferior">Inferior</option>
+<option value="Superior">Superior</option>
+<option value="Inferior Esq.">Inferior Esq.</option>
+<option value="Superior Esq.">Superior Esq.</option>
+<option value="Inferior Dir.">Inferior Dir.</option>
+<option value="Superior Dir.">Superior Dir.</option>
+<option value="Base">Base</option>
+<option value="Botton">Botton</option>
+<option value="Left">Left</option>
+<option value="Right">Right</option>
+<option value="Top">Top</option>
+<option value="Upper">Upper</option>
+<option value="Upper Center">Upper Center</option>
+<option value="Lower Center">Lower Center</option>
+<option value="Side">Side</option>
+<option value="Pad">Pad</option>
+<option value="Tampo">Tampo</option>
+<option value="Cesto">Cesto</option>
+<option value="Central">Central</option>
+<option value="Traseiro">Traseiro</option>
+<option value="Lateral">Lateral</option>
+<option value="Woof">Woof</option>
+<option value="Rear">Rear</option>
+<option value="Front">Front</option>
+<option value="Lajota">Lajota</option>
 </select>
 <input type="text" id="etiqueta6">
 <input type="number" placeholder="Max 6%" id="umidade6">
@@ -731,9 +872,8 @@ padding: 10px;
 
 <div class="line-nine">
 <label></label>  
-<button type="button" id="send" onclick="saving()" disabled><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 21" height="26" id="Layer_21" viewBox="0 0 26 26" width="26"><title/><polygon points="3 12 8.61 14.992 17 8 9 17.455 9 21 12.164 16.887 18 20 21 3 3 12"/></svg>Send</button>
-  
-<button disabled type="button" id="save" onclick="validateInspec()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 52 52" width="26"><path d="M0 0h48v48h-48z" fill="none"/><path d="M34 6h-24c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-24l-8-8zm-10 32c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm6-20h-20v-8h20v8z"/></svg>Save</button>
+<button type="button" id="send" onclick="saving()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 21" height="26" id="Layer_21" viewBox="0 0 26 26" width="26"><title/><polygon points="3 12 8.61 14.992 17 8 9 17.455 9 21 12.164 16.887 18 20 21 3 3 12"/></svg>Send</button>
+<button type="button" id="save" onclick="validateInspec()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 0 52 52" width="26"><path d="M0 0h48v48h-48z" fill="none"/><path d="M34 6h-24c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-24l-8-8zm-10 32c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm6-20h-20v-8h20v8z"/></svg>Save</button>
 <button type="button" id="clean" onclick="cleaning()" ><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" height="24" id="Layer_1" viewBox="0 0 22 22" width="24"><title/><path d="M21.20709,2.79291a.99989.99989,0,0,0-1.41418,0L12.893,9.69275l1.41425,1.41418,6.89984-6.89984A.99989.99989,0,0,0,21.20709,2.79291Z"/><path d="M12.31055,16.13965c-1.51636-1.486-3.06219-3.01465-4.39972-4.57166l-.2193.12073-.00934.00513a6.87365,6.87365,0,0,1-4.88538.65833.65315.65315,0,0,0-.79443.69147A9.82176,9.82176,0,0,0,4.7807,19.17352a12.3232,12.3232,0,0,0,4.178-1.77637,14.79974,14.79974,0,0,1-2.44946,3.19507A12.05327,12.05327,0,0,0,8.696,21.76483a.64246.64246,0,0,0,.24408.04767.65283.65283,0,0,0,.47119-.20074,17.80072,17.80072,0,0,0,3.21582-4.88623l.08655-.188C12.57751,16.40375,12.44806,16.2746,12.31055,16.13965Z"/><path d="M13.36035,15.06885l.04742.04675.422-.844a1.612,1.612,0,0,0-.30194-1.86072l-1.65717-1.65717a1.612,1.612,0,0,0-1.86072-.30194L9.25,10.83173C10.50134,12.261,11.9469,13.68317,13.36035,15.06885Z"/></svg>Clean</button>
 <button type="button" id="home" onclick="apphome()"><?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 32 32" id="Glyph" height="24px" version="1.1"  width="24px"  viewBox="0 0 38 38" xml:space="preserve"><path d="M30.854,16.548C30.523,17.43,29.703,18,28.764,18H28v11c0,0.552-0.448,1-1,1h-6v-7c0-2.757-2.243-5-5-5  s-5,2.243-5,5v7H5c-0.552,0-1-0.448-1-1V18H3.235c-0.939,0-1.759-0.569-2.09-1.451c-0.331-0.882-0.088-1.852,0.62-2.47L13.444,3.019  c1.434-1.357,3.679-1.357,5.112,0l11.707,11.086C30.941,14.696,31.185,15.666,30.854,16.548z" id="XMLID_219_"/></svg>Home</button> 
 <label></label> 
@@ -846,6 +986,11 @@ console.log(amV, parte1V, pesomax1V, pesomin1V, compmin1V, compmax1V, largmin1V,
 }
 
 document.getElementById("send").onclick = function () {
+    
+const am = document.getElementById('am').value;
+if (am.length == 4) {
+  
+ 
   readFom();
 
   firebase
@@ -918,20 +1063,721 @@ document.getElementById("send").onclick = function () {
     
     });
   
-  alert("Data Inserted");
-   
- 
-};
 
-//validation
+mail1()  
+  
+  
+}//send
+  
+ 
+};//validation
+  
+
+function mail1(){  
+var field1 = document.getElementById('turno').value;
+var field2 = document.getElementById('auditor').value;
+var field3 = document.getElementById('encarregado').value;
+var field4 = document.getElementById('operador').value;
+var field5 = document.getElementById('tpinsp').value;
+var field6 = document.getElementById('am').value;
+var field7 = document.getElementById('maquina').value;
+var field8 = document.getElementById('ciclo').value;
+var field9 = document.getElementById('silo').value;
+var field10 = document.getElementById('dsilo').value;
+var field11 = document.getElementById('dop').value;
+var field12 = document.getElementById('dft').value;
+var field13 = document.getElementById('vacuo1').value; 
+var field14 = document.getElementById('vacuo2').value;
+var field15 = document.getElementById('refri1').value; 
+var field16 = document.getElementById('refri2').value; 
+var field17 = document.getElementById('parte1').value; 
+var field18 = document.getElementById('etiqueta1').value;
+var field19 = document.getElementById('umidade1').value;
+var field20 = document.getElementById('Solda1').value;
+var field21 = document.getElementById('pesomin1').value;
+var field22 = document.getElementById('pesomax1').value;
+var field23 = document.getElementById('pesoreal1').value;
+var field24 = document.getElementById('compmin1').value;
+var field25 = document.getElementById('compmax1').value;
+var field26 = document.getElementById('compreal1').value;
+var field27 = document.getElementById('largmin1').value;
+var field28 = document.getElementById('largmax1').value;
+var field29 = document.getElementById('largreal1').value;
+var field30 = document.getElementById('altmin1').value;
+var field31 = document.getElementById('altmax1').value;
+var field32 = document.getElementById('altreal1').value;
+var field33 = document.getElementById('cliche1').value;
+var field34 = document.getElementById('visual1').value;
+var field35 = document.getElementById('observacao').value;  
+
+ 
+  
+    var formData = new FormData();
+  
+    field8 = field8.replace('.',',');
+    field10 = field10.replace('.',',');
+    field11 = field11.replace('.',',');
+    field12 = field12.replace('.',',');
+    field13 = field13.replace('.',',');
+    field14 = field14.replace('.',',');
+    field15 = field15.replace('.',',');
+    field16 = field16.replace('.',',');
+    field19 = field19.replace('.',',');
+    field20 = field20.replace('.',',');
+    field21 = field21.replace('.',',');
+    field22 = field22.replace('.',',');
+    field23 = field23.replace('.',',');
+    field24 = field24.replace('.',',');
+    field25 = field25.replace('.',',');
+    field26 = field26.replace('.',',');
+    field27 = field27.replace('.',',');
+    field28 = field28.replace('.',',');
+    field29 = field29.replace('.',',');
+    field30 = field30.replace('.',',');
+    field31 = field31.replace('.',',');
+    field32 = field32.replace('.',',');
+  
+  
+    formData.append("entry.1804313168", field1);
+    formData.append("entry.497425672", field2);
+    formData.append("entry.2105690316", field3);
+    formData.append("entry.1472452664", field4);
+    formData.append("entry.26501858", field5);
+    formData.append("entry.127374800", field6);
+    formData.append("entry.1570424441", field7);
+    formData.append("entry.441750222", field8);
+    formData.append("entry.602157514", field9);
+    formData.append("entry.1068777251", field10);
+    formData.append("entry.168883245", field11);
+    formData.append("entry.2119879718", field12);
+    formData.append("entry.925949788", field13);
+    formData.append("entry.1175074839", field14);
+    formData.append("entry.1468407475", field15);
+    formData.append("entry.129081113", field16);
+   formData.append("entry.689834492", field17);
+   formData.append("entry.2067108841", field18);
+   formData.append("entry.694075555", field19);
+   formData.append("entry.1838545527", field20);
+   formData.append("entry.994453188", field21);
+   formData.append("entry.1005677988", field22);
+   formData.append("entry.329250359", field23);
+   formData.append("entry.1901345817", field24);
+   formData.append("entry.1468872579", field25);
+   formData.append("entry.276169732", field26);
+   formData.append("entry.591474089", field27);
+   formData.append("entry.425116755", field28);
+   formData.append("entry.209095019", field29);
+   formData.append("entry.659857329", field30);
+   formData.append("entry.1417398463", field31);
+   formData.append("entry.845101825", field32);
+   formData.append("entry.1610014390", field33);
+   formData.append("entry.1687081779", field34);
+   formData.append("entry.2068539463", field35);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://docs.google.com/forms/d/1ped6fi5JRjdk_e4CoRpwt3RZ_RMM-STKw98RCCqQiog/formResponse?", true);
+
+    xhr.send(formData);
+
+    //return false; 
+ 
+mail2();    
+  
+}//mail1  
+  
+function mail2(){
+  
+const parte2 = document.getElementById('parte2').value;
+if(parte2!="NA"){  
+    
+var field1 = document.getElementById('turno').value;
+var field2 = document.getElementById('auditor').value;
+var field3 = document.getElementById('encarregado').value;
+var field4 = document.getElementById('operador').value;
+var field5 = document.getElementById('tpinsp').value;
+var field6 = document.getElementById('am').value;
+var field7 = document.getElementById('maquina').value;
+var field8 = document.getElementById('ciclo').value;
+var field9 = document.getElementById('silo').value;
+var field10 = document.getElementById('dsilo').value;
+var field11 = document.getElementById('dop').value;
+var field12 = document.getElementById('dft').value;
+var field13 = document.getElementById('vacuo1').value; 
+var field14 = document.getElementById('vacuo2').value;
+var field15 = document.getElementById('refri1').value; 
+var field16 = document.getElementById('refri2').value; 
+var field17 = document.getElementById('parte2').value; 
+var field18 = document.getElementById('etiqueta2').value;
+var field19 = document.getElementById('umidade2').value;
+var field20 = document.getElementById('Solda2').value;
+var field21 = document.getElementById('pesomin2').value;
+var field22 = document.getElementById('pesomax2').value;
+var field23 = document.getElementById('pesoreal2').value;
+var field24 = document.getElementById('compmin2').value;
+var field25 = document.getElementById('compmax2').value;
+var field26 = document.getElementById('compreal2').value;
+var field27 = document.getElementById('largmin2').value;
+var field28 = document.getElementById('largmax2').value;
+var field29 = document.getElementById('largreal2').value;
+var field30 = document.getElementById('altmin2').value;
+var field31 = document.getElementById('altmax2').value;
+var field32 = document.getElementById('altreal2').value;
+var field33 = document.getElementById('cliche2').value;
+var field34 = document.getElementById('visual2').value;
+
+
+ 
+  
+    var formData = new FormData();
+  
+    field8 = field8.replace('.',',');
+    field10 = field10.replace('.',',');
+    field11 = field11.replace('.',',');
+    field12 = field12.replace('.',',');
+    field13 = field13.replace('.',',');
+    field14 = field14.replace('.',',');
+    field15 = field15.replace('.',',');
+    field16 = field16.replace('.',',');
+    field19 = field19.replace('.',',');
+    field20 = field20.replace('.',',');
+    field21 = field21.replace('.',',');
+    field22 = field22.replace('.',',');
+    field23 = field23.replace('.',',');
+    field24 = field24.replace('.',',');
+    field25 = field25.replace('.',',');
+    field26 = field26.replace('.',',');
+    field27 = field27.replace('.',',');
+    field28 = field28.replace('.',',');
+    field29 = field29.replace('.',',');
+    field30 = field30.replace('.',',');
+    field31 = field31.replace('.',',');
+    field32 = field32.replace('.',',');
+  
+  
+    formData.append("entry.1804313168", field1);
+    formData.append("entry.497425672", field2);
+    formData.append("entry.2105690316", field3);
+    formData.append("entry.1472452664", field4);
+    formData.append("entry.26501858", field5);
+    formData.append("entry.127374800", field6);
+    formData.append("entry.1570424441", field7);
+    formData.append("entry.441750222", field8);
+    formData.append("entry.602157514", field9);
+    formData.append("entry.1068777251", field10);
+    formData.append("entry.168883245", field11);
+    formData.append("entry.2119879718", field12);
+    formData.append("entry.925949788", field13);
+    formData.append("entry.1175074839", field14);
+    formData.append("entry.1468407475", field15);
+    formData.append("entry.129081113", field16);
+   formData.append("entry.689834492", field17);
+   formData.append("entry.2067108841", field18);
+   formData.append("entry.694075555", field19);
+   formData.append("entry.1838545527", field20);
+   formData.append("entry.994453188", field21);
+   formData.append("entry.1005677988", field22);
+   formData.append("entry.329250359", field23);
+   formData.append("entry.1901345817", field24);
+   formData.append("entry.1468872579", field25);
+   formData.append("entry.276169732", field26);
+   formData.append("entry.591474089", field27);
+   formData.append("entry.425116755", field28);
+   formData.append("entry.209095019", field29);
+   formData.append("entry.659857329", field30);
+   formData.append("entry.1417398463", field31);
+   formData.append("entry.845101825", field32);
+   formData.append("entry.1610014390", field33);
+   formData.append("entry.1687081779", field34);
+  
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://docs.google.com/forms/d/1ped6fi5JRjdk_e4CoRpwt3RZ_RMM-STKw98RCCqQiog/formResponse?", true);
+
+    xhr.send(formData);
+
+    //return false; 
+  
+ mail3(); 
+  
+}  
+}//mail2
+  
+function mail3(){
+const parte3 = document.getElementById('parte3').value;
+if(parte3!="NA"){
+  
+var field1 = document.getElementById('turno').value;
+var field2 = document.getElementById('auditor').value;
+var field3 = document.getElementById('encarregado').value;
+var field4 = document.getElementById('operador').value;
+var field5 = document.getElementById('tpinsp').value;
+var field6 = document.getElementById('am').value;
+var field7 = document.getElementById('maquina').value;
+var field8 = document.getElementById('ciclo').value;
+var field9 = document.getElementById('silo').value;
+var field10 = document.getElementById('dsilo').value;
+var field11 = document.getElementById('dop').value;
+var field12 = document.getElementById('dft').value;
+var field13 = document.getElementById('vacuo1').value; 
+var field14 = document.getElementById('vacuo2').value;
+var field15 = document.getElementById('refri1').value; 
+var field16 = document.getElementById('refri2').value; 
+var field17 = document.getElementById('parte3').value; 
+var field18 = document.getElementById('etiqueta3').value;
+var field19 = document.getElementById('umidade3').value;
+var field20 = document.getElementById('Solda3').value;
+var field21 = document.getElementById('pesomin3').value;
+var field22 = document.getElementById('pesomax3').value;
+var field23 = document.getElementById('pesoreal3').value;
+var field24 = document.getElementById('compmin3').value;
+var field25 = document.getElementById('compmax3').value;
+var field26 = document.getElementById('compreal3').value;
+var field27 = document.getElementById('largmin3').value;
+var field28 = document.getElementById('largmax3').value;
+var field29 = document.getElementById('largreal3').value;
+var field30 = document.getElementById('altmin3').value;
+var field31 = document.getElementById('altmax3').value;
+var field32 = document.getElementById('altreal3').value;
+var field33 = document.getElementById('cliche3').value;
+var field34 = document.getElementById('visual3').value;
+
+
+ 
+  
+    var formData = new FormData();
+  
+    field8 = field8.replace('.',',');
+    field10 = field10.replace('.',',');
+    field11 = field11.replace('.',',');
+    field12 = field12.replace('.',',');
+    field13 = field13.replace('.',',');
+    field14 = field14.replace('.',',');
+    field15 = field15.replace('.',',');
+    field16 = field16.replace('.',',');
+    field19 = field19.replace('.',',');
+    field20 = field20.replace('.',',');
+    field21 = field21.replace('.',',');
+    field22 = field22.replace('.',',');
+    field23 = field23.replace('.',',');
+    field24 = field24.replace('.',',');
+    field25 = field25.replace('.',',');
+    field26 = field26.replace('.',',');
+    field27 = field27.replace('.',',');
+    field28 = field28.replace('.',',');
+    field29 = field29.replace('.',',');
+    field30 = field30.replace('.',',');
+    field31 = field31.replace('.',',');
+    field32 = field32.replace('.',',');
+  
+  
+    formData.append("entry.1804313168", field1);
+    formData.append("entry.497425672", field2);
+    formData.append("entry.2105690316", field3);
+    formData.append("entry.1472452664", field4);
+    formData.append("entry.26501858", field5);
+    formData.append("entry.127374800", field6);
+    formData.append("entry.1570424441", field7);
+    formData.append("entry.441750222", field8);
+    formData.append("entry.602157514", field9);
+    formData.append("entry.1068777251", field10);
+    formData.append("entry.168883245", field11);
+    formData.append("entry.2119879718", field12);
+    formData.append("entry.925949788", field13);
+    formData.append("entry.1175074839", field14);
+    formData.append("entry.1468407475", field15);
+    formData.append("entry.129081113", field16);
+   formData.append("entry.689834492", field17);
+   formData.append("entry.2067108841", field18);
+   formData.append("entry.694075555", field19);
+   formData.append("entry.1838545527", field20);
+   formData.append("entry.994453188", field21);
+   formData.append("entry.1005677988", field22);
+   formData.append("entry.329250359", field23);
+   formData.append("entry.1901345817", field24);
+   formData.append("entry.1468872579", field25);
+   formData.append("entry.276169732", field26);
+   formData.append("entry.591474089", field27);
+   formData.append("entry.425116755", field28);
+   formData.append("entry.209095019", field29);
+   formData.append("entry.659857329", field30);
+   formData.append("entry.1417398463", field31);
+   formData.append("entry.845101825", field32);
+   formData.append("entry.1610014390", field33);
+   formData.append("entry.1687081779", field34);
+  
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://docs.google.com/forms/d/1ped6fi5JRjdk_e4CoRpwt3RZ_RMM-STKw98RCCqQiog/formResponse?", true);
+
+    xhr.send(formData);
+
+    //return false; 
+  
+ mail4();   
+ 
+
+}    
+   
+} //mail3 
+  
+function mail4(){
+const parte4 = document.getElementById('parte4').value;
+if(parte4!="NA"){
+  
+var field1 = document.getElementById('turno').value;
+var field2 = document.getElementById('auditor').value;
+var field3 = document.getElementById('encarregado').value;
+var field4 = document.getElementById('operador').value;
+var field5 = document.getElementById('tpinsp').value;
+var field6 = document.getElementById('am').value;
+var field7 = document.getElementById('maquina').value;
+var field8 = document.getElementById('ciclo').value;
+var field9 = document.getElementById('silo').value;
+var field10 = document.getElementById('dsilo').value;
+var field11 = document.getElementById('dop').value;
+var field12 = document.getElementById('dft').value;
+var field13 = document.getElementById('vacuo1').value; 
+var field14 = document.getElementById('vacuo2').value;
+var field15 = document.getElementById('refri1').value; 
+var field16 = document.getElementById('refri2').value; 
+var field17 = document.getElementById('parte4').value; 
+var field18 = document.getElementById('etiqueta4').value;
+var field19 = document.getElementById('umidade4').value;
+var field20 = document.getElementById('Solda4').value;
+var field21 = document.getElementById('pesomin4').value;
+var field22 = document.getElementById('pesomax4').value;
+var field23 = document.getElementById('pesoreal4').value;
+var field24 = document.getElementById('compmin4').value;
+var field25 = document.getElementById('compmax4').value;
+var field26 = document.getElementById('compreal4').value;
+var field27 = document.getElementById('largmin4').value;
+var field28 = document.getElementById('largmax4').value;
+var field29 = document.getElementById('largreal4').value;
+var field30 = document.getElementById('altmin4').value;
+var field31 = document.getElementById('altmax4').value;
+var field32 = document.getElementById('altreal4').value;
+var field33 = document.getElementById('cliche4').value;
+var field34 = document.getElementById('visual4').value;
+
+
+ 
+  
+    var formData = new FormData();
+  
+    field8 = field8.replace('.',',');
+    field10 = field10.replace('.',',');
+    field11 = field11.replace('.',',');
+    field12 = field12.replace('.',',');
+    field13 = field13.replace('.',',');
+    field14 = field14.replace('.',',');
+    field15 = field15.replace('.',',');
+    field16 = field16.replace('.',',');
+    field19 = field19.replace('.',',');
+    field20 = field20.replace('.',',');
+    field21 = field21.replace('.',',');
+    field22 = field22.replace('.',',');
+    field23 = field23.replace('.',',');
+    field24 = field24.replace('.',',');
+    field25 = field25.replace('.',',');
+    field26 = field26.replace('.',',');
+    field27 = field27.replace('.',',');
+    field28 = field28.replace('.',',');
+    field29 = field29.replace('.',',');
+    field30 = field30.replace('.',',');
+    field31 = field31.replace('.',',');
+    field32 = field32.replace('.',',');
+  
+  
+    formData.append("entry.1804313168", field1);
+    formData.append("entry.497425672", field2);
+    formData.append("entry.2105690316", field3);
+    formData.append("entry.1472452664", field4);
+    formData.append("entry.26501858", field5);
+    formData.append("entry.127374800", field6);
+    formData.append("entry.1570424441", field7);
+    formData.append("entry.441750222", field8);
+    formData.append("entry.602157514", field9);
+    formData.append("entry.1068777251", field10);
+    formData.append("entry.168883245", field11);
+    formData.append("entry.2119879718", field12);
+    formData.append("entry.925949788", field13);
+    formData.append("entry.1175074839", field14);
+    formData.append("entry.1468407475", field15);
+    formData.append("entry.129081113", field16);
+   formData.append("entry.689834492", field17);
+   formData.append("entry.2067108841", field18);
+   formData.append("entry.694075555", field19);
+   formData.append("entry.1838545527", field20);
+   formData.append("entry.994453188", field21);
+   formData.append("entry.1005677988", field22);
+   formData.append("entry.329250359", field23);
+   formData.append("entry.1901345817", field24);
+   formData.append("entry.1468872579", field25);
+   formData.append("entry.276169732", field26);
+   formData.append("entry.591474089", field27);
+   formData.append("entry.425116755", field28);
+   formData.append("entry.209095019", field29);
+   formData.append("entry.659857329", field30);
+   formData.append("entry.1417398463", field31);
+   formData.append("entry.845101825", field32);
+   formData.append("entry.1610014390", field33);
+   formData.append("entry.1687081779", field34);
+  
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://docs.google.com/forms/d/1ped6fi5JRjdk_e4CoRpwt3RZ_RMM-STKw98RCCqQiog/formResponse?", true);
+
+    xhr.send(formData);
+
+    //return false; 
+  
+ mail5();   
+ 
+
+}    
+   
+} //mail4
+  
+function mail5(){
+const parte5 = document.getElementById('parte5').value;
+if(parte5!="NA"){
+  
+var field1 = document.getElementById('turno').value;
+var field2 = document.getElementById('auditor').value;
+var field3 = document.getElementById('encarregado').value;
+var field4 = document.getElementById('operador').value;
+var field5 = document.getElementById('tpinsp').value;
+var field6 = document.getElementById('am').value;
+var field7 = document.getElementById('maquina').value;
+var field8 = document.getElementById('ciclo').value;
+var field9 = document.getElementById('silo').value;
+var field10 = document.getElementById('dsilo').value;
+var field11 = document.getElementById('dop').value;
+var field12 = document.getElementById('dft').value;
+var field13 = document.getElementById('vacuo1').value; 
+var field14 = document.getElementById('vacuo2').value;
+var field15 = document.getElementById('refri1').value; 
+var field16 = document.getElementById('refri2').value; 
+var field17 = document.getElementById('parte5').value; 
+var field18 = document.getElementById('etiqueta5').value;
+var field19 = document.getElementById('umidade5').value;
+var field20 = document.getElementById('Solda5').value;
+var field21 = document.getElementById('pesomin5').value;
+var field22 = document.getElementById('pesomax5').value;
+var field23 = document.getElementById('pesoreal5').value;
+var field24 = document.getElementById('compmin5').value;
+var field25 = document.getElementById('compmax5').value;
+var field26 = document.getElementById('compreal5').value;
+var field27 = document.getElementById('largmin5').value;
+var field28 = document.getElementById('largmax5').value;
+var field29 = document.getElementById('largreal5').value;
+var field30 = document.getElementById('altmin5').value;
+var field31 = document.getElementById('altmax5').value;
+var field32 = document.getElementById('altreal5').value;
+var field33 = document.getElementById('cliche5').value;
+var field34 = document.getElementById('visual5').value;
+
+
+ 
+  
+    var formData = new FormData();
+  
+    field8 = field8.replace('.',',');
+    field10 = field10.replace('.',',');
+    field11 = field11.replace('.',',');
+    field12 = field12.replace('.',',');
+    field13 = field13.replace('.',',');
+    field14 = field14.replace('.',',');
+    field15 = field15.replace('.',',');
+    field16 = field16.replace('.',',');
+    field19 = field19.replace('.',',');
+    field20 = field20.replace('.',',');
+    field21 = field21.replace('.',',');
+    field22 = field22.replace('.',',');
+    field23 = field23.replace('.',',');
+    field24 = field24.replace('.',',');
+    field25 = field25.replace('.',',');
+    field26 = field26.replace('.',',');
+    field27 = field27.replace('.',',');
+    field28 = field28.replace('.',',');
+    field29 = field29.replace('.',',');
+    field30 = field30.replace('.',',');
+    field31 = field31.replace('.',',');
+    field32 = field32.replace('.',',');
+  
+  
+    formData.append("entry.1804313168", field1);
+    formData.append("entry.497425672", field2);
+    formData.append("entry.2105690316", field3);
+    formData.append("entry.1472452664", field4);
+    formData.append("entry.26501858", field5);
+    formData.append("entry.127374800", field6);
+    formData.append("entry.1570424441", field7);
+    formData.append("entry.441750222", field8);
+    formData.append("entry.602157514", field9);
+    formData.append("entry.1068777251", field10);
+    formData.append("entry.168883245", field11);
+    formData.append("entry.2119879718", field12);
+    formData.append("entry.925949788", field13);
+    formData.append("entry.1175074839", field14);
+    formData.append("entry.1468407475", field15);
+    formData.append("entry.129081113", field16);
+   formData.append("entry.689834492", field17);
+   formData.append("entry.2067108841", field18);
+   formData.append("entry.694075555", field19);
+   formData.append("entry.1838545527", field20);
+   formData.append("entry.994453188", field21);
+   formData.append("entry.1005677988", field22);
+   formData.append("entry.329250359", field23);
+   formData.append("entry.1901345817", field24);
+   formData.append("entry.1468872579", field25);
+   formData.append("entry.276169732", field26);
+   formData.append("entry.591474089", field27);
+   formData.append("entry.425116755", field28);
+   formData.append("entry.209095019", field29);
+   formData.append("entry.659857329", field30);
+   formData.append("entry.1417398463", field31);
+   formData.append("entry.845101825", field32);
+   formData.append("entry.1610014390", field33);
+   formData.append("entry.1687081779", field34);
+  
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://docs.google.com/forms/d/1ped6fi5JRjdk_e4CoRpwt3RZ_RMM-STKw98RCCqQiog/formResponse?", true);
+
+    xhr.send(formData);
+
+    //return false; 
+  
+ mail6();   
+ 
+
+}    
+   
+} //mail5  
+  
+function mail6(){
+const parte6 = document.getElementById('parte6').value;
+if(parte6!="NA"){
+  
+var field1 = document.getElementById('turno').value;
+var field2 = document.getElementById('auditor').value;
+var field3 = document.getElementById('encarregado').value;
+var field4 = document.getElementById('operador').value;
+var field5 = document.getElementById('tpinsp').value;
+var field6 = document.getElementById('am').value;
+var field7 = document.getElementById('maquina').value;
+var field8 = document.getElementById('ciclo').value;
+var field9 = document.getElementById('silo').value;
+var field10 = document.getElementById('dsilo').value;
+var field11 = document.getElementById('dop').value;
+var field12 = document.getElementById('dft').value;
+var field13 = document.getElementById('vacuo1').value; 
+var field14 = document.getElementById('vacuo2').value;
+var field15 = document.getElementById('refri1').value; 
+var field16 = document.getElementById('refri2').value; 
+var field17 = document.getElementById('parte6').value; 
+var field18 = document.getElementById('etiqueta6').value;
+var field19 = document.getElementById('umidade6').value;
+var field20 = document.getElementById('Solda6').value;
+var field21 = document.getElementById('pesomin6').value;
+var field22 = document.getElementById('pesomax6').value;
+var field23 = document.getElementById('pesoreal6').value;
+var field24 = document.getElementById('compmin6').value;
+var field25 = document.getElementById('compmax6').value;
+var field26 = document.getElementById('compreal6').value;
+var field27 = document.getElementById('largmin6').value;
+var field28 = document.getElementById('largmax6').value;
+var field29 = document.getElementById('largreal6').value;
+var field30 = document.getElementById('altmin6').value;
+var field31 = document.getElementById('altmax6').value;
+var field32 = document.getElementById('altreal6').value;
+var field33 = document.getElementById('cliche6').value;
+var field34 = document.getElementById('visual6').value;
+
+
+ 
+  
+    var formData = new FormData();
+  
+    field8 = field8.replace('.',',');
+    field10 = field10.replace('.',',');
+    field11 = field11.replace('.',',');
+    field12 = field12.replace('.',',');
+    field13 = field13.replace('.',',');
+    field14 = field14.replace('.',',');
+    field15 = field15.replace('.',',');
+    field16 = field16.replace('.',',');
+    field19 = field19.replace('.',',');
+    field20 = field20.replace('.',',');
+    field21 = field21.replace('.',',');
+    field22 = field22.replace('.',',');
+    field23 = field23.replace('.',',');
+    field24 = field24.replace('.',',');
+    field25 = field25.replace('.',',');
+    field26 = field26.replace('.',',');
+    field27 = field27.replace('.',',');
+    field28 = field28.replace('.',',');
+    field29 = field29.replace('.',',');
+    field30 = field30.replace('.',',');
+    field31 = field31.replace('.',',');
+    field32 = field32.replace('.',',');
+  
+  
+    formData.append("entry.1804313168", field1);
+    formData.append("entry.497425672", field2);
+    formData.append("entry.2105690316", field3);
+    formData.append("entry.1472452664", field4);
+    formData.append("entry.26501858", field5);
+    formData.append("entry.127374800", field6);
+    formData.append("entry.1570424441", field7);
+    formData.append("entry.441750222", field8);
+    formData.append("entry.602157514", field9);
+    formData.append("entry.1068777251", field10);
+    formData.append("entry.168883245", field11);
+    formData.append("entry.2119879718", field12);
+    formData.append("entry.925949788", field13);
+    formData.append("entry.1175074839", field14);
+    formData.append("entry.1468407475", field15);
+    formData.append("entry.129081113", field16);
+   formData.append("entry.689834492", field17);
+   formData.append("entry.2067108841", field18);
+   formData.append("entry.694075555", field19);
+   formData.append("entry.1838545527", field20);
+   formData.append("entry.994453188", field21);
+   formData.append("entry.1005677988", field22);
+   formData.append("entry.329250359", field23);
+   formData.append("entry.1901345817", field24);
+   formData.append("entry.1468872579", field25);
+   formData.append("entry.276169732", field26);
+   formData.append("entry.591474089", field27);
+   formData.append("entry.425116755", field28);
+   formData.append("entry.209095019", field29);
+   formData.append("entry.659857329", field30);
+   formData.append("entry.1417398463", field31);
+   formData.append("entry.845101825", field32);
+   formData.append("entry.1610014390", field33);
+   formData.append("entry.1687081779", field34);
+  
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://docs.google.com/forms/d/1ped6fi5JRjdk_e4CoRpwt3RZ_RMM-STKw98RCCqQiog/formResponse?", true);
+
+    xhr.send(formData);
+
+    //return false; 
+  
+ 
+}    
+   
+} //mail6  
+  
+  
   
 function callspec() {
 const am = document.getElementById('am').value;
 if (am.length == 4) {
-alert(am.length + " igual chama fillSpec()");
-document.getElementById("save").disabled = false;
-document.getElementById("send").disabled = false;  
-  
+//alert(am.length + " igual chama fillSpec()");
  fillSpec();
 }
 }//spec  
@@ -2187,8 +3033,8 @@ closeMf.close()
 }//Modal
 
 
-//02.07.23 - Rev - 05 - clean correction
+//28.10.23 - Rev - 05 - clean correction
 
 </script>
 
-</html>  
+</html> 
